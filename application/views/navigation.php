@@ -7,11 +7,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Simple Sidebar - Start Bootstrap Template</title>
-    <link href="<?php echo base_url(); ?>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>css/sidebar.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>asset/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url('asset/css/bootstrap.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('asset/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('asset/css/simple_sidebar.css'); ?>" rel="stylesheet">
+    <!--<link href="<?php echo base_url(); ?>asset/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">-->
 </head>
 <body>
+
     <nav class="navbar navbar-default no-margin">
     <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header fixed-brand">
@@ -33,14 +35,14 @@
             <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
  
                 <li class="active">
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Dashboard</a>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-dashboard fa-stack-1x "></i></span> Home</a>
                        <ul class="nav-pills nav-stacked" style="list-style-type:none;">
                         <li><a href="#">link1</a></li>
                         <li><a href="#">link2</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span> Shortcut</a>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span> Dinarpal</a>
                     <ul class="nav-pills nav-stacked" style="list-style-type:none;">
                         <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>link1</a></li>
                         <li><a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>link2</a></li>
@@ -48,16 +50,16 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cloud-download fa-stack-1x "></i></span>Overview</a>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cloud-download fa-stack-1x "></i></span>Send</a>
                 </li>
                 <li>
-                    <a href="#"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-cart-plus fa-stack-1x "></i></span>Events</a>
+                    <a href="#"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-cart-plus fa-stack-1x "></i></span>Keep</a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-youtube-play fa-stack-1x "></i></span>About</a>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-youtube-play fa-stack-1x "></i></span>Sell</a>
                 </li>
                 <li>
-                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Services</a>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Buy</a>
                 </li>
                 <li>
                     <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-server fa-stack-1x "></i></span>Contact</a>
@@ -79,8 +81,8 @@
     </div>
     <!-- /#wrapper -->
     <!-- jQuery -->
-    <script src="<?php echo base_url(); ?>js/jquery-1.11.2.min.js"></script>
-    <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>js/sidebar_menu.js"></script>
+    <script src="<?php echo base_url('asset/js/jquery-1.11.3.min.js'); ?>"></script>
+    <script src="<?php echo base_url('asset/js/bootstrap.min.js'); ?>"></script>
+    <script src="<?php echo base_url('asset/js/sidebar_menu.js'); ?>"?></script>
 </body>
 </html>
