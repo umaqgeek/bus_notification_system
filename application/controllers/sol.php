@@ -20,8 +20,9 @@ class Sol extends CI_Controller {
 	public function index()
 	{
 		
-       echo "jdsjiajdijad";
-		//$this->load->view('file.php');
+       //echo "jdsjiajdijad";
+		$this->load->helper("url");
+		$this->load->view('home.php');
 	}
 }
 
