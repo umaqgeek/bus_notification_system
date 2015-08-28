@@ -7,12 +7,12 @@
     <meta name="author" content="">
     <title>Home | BUNS</title>
 
-     <link href="<?php echo base_url('asset/css/bootstrap.min.css'); ?>" rel="stylesheet">
-     <link href="<?php echo base_url('asset/css/font-awesome.min.css'); ?>" rel="stylesheet">
-     <link href="<?php echo base_url('asset/css/animate.min.css'); ?>" rel="stylesheet">
-     <link href="<?php echo base_url('asset/css/lightbox.css'); ?>" rel="stylesheet">
-     <link href="<?php echo base_url('asset/css/main.css'); ?>" rel="stylesheet">
-     <link href="<?php echo base_url('asset/css/responsive.css'); ?>" rel="stylesheet">
+     <link href="<?php echo base_url().'asset/css/bootstrap.min.css'; ?>" rel="stylesheet">
+     <link href="<?php echo base_url().'asset/css/font-awesome.min.css'; ?>" rel="stylesheet">
+     <link href="<?php echo base_url().'asset/css/animate.min.css'; ?>" rel="stylesheet">
+     <link href="<?php echo base_url().'asset/css/lightbox.css'; ?>" rel="stylesheet">
+     <link href="<?php echo base_url().'asset/css/main.css'; ?>" rel="stylesheet">
+     <link href="<?php echo base_url().'asset/css/responsive.css'; ?>" rel="stylesheet">
 
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
@@ -27,7 +27,7 @@
 
 <body>
 	<header id="header">      
-        <div class="container">
+       <!-- <div class="container">
             <div class="row">
                 <div class="col-sm-12 overflow">
                    <div class="social-icons pull-right">
@@ -41,7 +41,7 @@
                     </div> 
                 </div>
              </div>
-        </div>
+        </div>-->
         <div class="navbar navbar-inverse" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -53,7 +53,7 @@
                     </button>
 
                     <a class="navbar-brand" href="index.html">
-                    	<h1><img src="images/logo.png" alt="logo"></h1>
+                    	<h1><img src="<?php echo base_url(); ?>asset/images/logo.png" alt="logo"></h1>
                     </a>
                     
                 </div>
@@ -93,17 +93,18 @@
             <div class="main-slider">
                 <div class="slide-text">
                     <h1>Bus Notification System (BuNS)</h1>
-                    <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
+                    <p>BuNS is the acronym for "Bus Notification System" which provides bus travel information to enhance users' travel experience with Panorama Transit. BuNS also provides a host of helpful information such as details of the bus routes, bus services on the road that are delayed or diverted and scheduled changes in bus operating hours.</p>
                     <a href="#" class="btn btn-common">SIGN UP</a>
                 </div>
-                <img src="images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
-                <img src="images/home/slider/slide1/circle1.png" class="slider-circle1" alt="slider image">
-                <img src="images/home/slider/slide1/circle2.png" class="slider-circle2" alt="slider image">
-                <img src="images/home/slider/slide1/cloud1.png" class="slider-cloud1" alt="slider image">
-                <img src="images/home/slider/slide1/cloud2.png" class="slider-cloud2" alt="slider image">
-                <img src="images/home/slider/slide1/cloud3.png" class="slider-cloud3" alt="slider image">
-                <img src="images/home/slider/slide1/sun.png" class="slider-sun" alt="slider image">
-                <img src="images/home/cycle.png" class="slider-cycle" alt="">
+
+                <img src="<?php echo base_url(); ?>asset/images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
+                <img src="<?php echo base_url(); ?>asset/images/home/slider/slide1/circle1.png" class="slider-circle1" alt="slider image">
+                <img src="<?php echo base_url(); ?>asset/images/home/slider/slide1/circle2.png" class="slider-circle2" alt="slider image">
+                <img src="<?php echo base_url(); ?>asset/images/home/slider/slide1/cloud1.png" class="slider-cloud1" alt="slider image">
+                <img src="<?php echo base_url(); ?>asset/images/home/slider/slide1/cloud2.png" class="slider-cloud2" alt="slider image">
+                <img src="<?php echo base_url(); ?>asset/images/home/slider/slide1/cloud3.png" class="slider-cloud3" alt="slider image">
+                <img src="<?php echo base_url(); ?>asset/images/home/slider/slide1/sun.png" class="slider-sun" alt="slider image">
+                <img src="<?php echo base_url(); ?>asset/images/home/cycle.png" class="slider-cycle" alt="">
             </div>
         </div>
         <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
