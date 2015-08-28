@@ -17,12 +17,14 @@ class Sol extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * http://codeigniter.com/user_guide/general/urls.html
 	 */
-
-	public function index5()
+	public function index()
 	{
 		
        //echo "jdsjiajdijad";
+		$this->load->helper("url");
 		$this->load->view('home.php');
+		$this->load->view('portfolio-details.php');
+	//	$this->load->view('contact2.php');
 	}
 }
 
