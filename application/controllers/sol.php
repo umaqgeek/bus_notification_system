@@ -17,16 +17,36 @@ class Sol extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * http://codeigniter.com/user_guide/general/urls.html
 	 */
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->database();
+		$this->load->helper('url');
+
+		$this->load->library('grocery_CRUD')
+	}
 	public function index()
 	{
 		
-       //echo "jdsjiajdijad";
-		$this->load->helper("url");
-		$this->load->view('register.php');
+       echo "<h1>Welcome to the world of Codeigniter</h1>";
+       die();
+		//$this->load->helper("url");
+		//$this->load->view('welcome_message.php');
 		//$this->load->view('mainpage.php');
 		//$this->load->view('portfolio-details.php');
 	//$this->load->view('contact2.php');
 	}
+
+	public function employees()
+    {
+        $this->grocery_crud->set_table('employees');
+        $output = $this->grocery_crud->render();
+ 
+        echo "<pre>";
+        print_r($output);
+        echo "</pre>";
+        die();
+    }
 }
 
 /* End of file welcome.php */
