@@ -46,7 +46,8 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="index.html">Home</a></li>    
-                        <li><a href="shortcodes.html ">Shortcodes</a></li>                    
+                        <li><a href="shortcodes.html ">Logout</a></li>       
+                                         
                     </ul>
                 </div>
                 <div class="search">

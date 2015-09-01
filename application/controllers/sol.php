@@ -22,9 +22,10 @@ class Sol extends CI_Controller {
 		
        //echo "jdsjiajdijad";
 		$this->load->helper("url");
-		$this->load->view('home.php');
-		$this->load->view('portfolio-details.php');
-	//	$this->load->view('contact2.php');
+		$this->load->view('register.php');
+		//$this->load->view('mainpage.php');
+		//$this->load->view('portfolio-details.php');
+	//$this->load->view('contact2.php');
 	}
 }
 
