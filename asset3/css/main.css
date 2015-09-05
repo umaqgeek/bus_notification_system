@@ -167,23 +167,23 @@ ul.nostyle i {
   padding: 22px 15px 21px;
 }
 @media only screen and (min-width: 768px) {
-  #main-menu.navbar-default {
+  #nb2sb-nav.navbar-default {
     background: rgba(255, 255, 255, 0.9);
     -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   }
-  #main-menu.navbar-default .navbar-nav > li > a {
+  #nb2sb-nav.navbar-default .navbar-nav> li > a {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  #main-menu.navbar-default .navbar-nav > li.active > a,
-  #main-menu.navbar-default .navbar-nav > li.open > a,
-  #main-menu.navbar-default .navbar-nav > li:hover > a {
+  #nb2sb-nav.navbar-default .navbar-nav > li.active > a,
+  #nb2sb-nav.navbar-default .navbar-nav> li.open > a,
+  #nb2sb-nav.navbar-default .navbar-nav> li:hover > a {
     background: transparent;
     padding-top: 37px;
     border-top: 3px solid #45aed6;
   }
-  #main-menu.navbar-default .dropdown-menu {
+  #nb2sb-nav.navbar-default .dropdown-menu {
     padding: 0 20px;
     min-width: 220px;
     background-color: rgba(26, 28, 40, 0.9);
@@ -193,29 +193,29 @@ ul.nostyle i {
     -webkit-box-shadow: none;
     background-clip: inherit;
   }
-  #main-menu.navbar-default .dropdown-menu > li {
+  #nb2sb-nav.navbar-default .dropdown-menu > li {
     border-left: 3px solid transparent;
     margin-left: -20px;
     padding-left: 17px;
     -webit-transition: border-color 400ms;
     transition: border-color 400ms;
   }
-  #main-menu.navbar-default .dropdown-menu > li > a {
+  #nb2sb-nav.navbar-default .dropdown-menu > li > a {
     border-top: 1px solid #404455;
     padding: 15px 0;
     color: #eeeeee;
   }
-  #main-menu.navbar-default .dropdown-menu > li:first-child > a {
+  #nb2sb-nav.navbar-default .dropdown-menu > li:first-child > a {
     border-top: 0;
   }
-  #main-menu.navbar-default .dropdown-menu > li.active,
-  #main-menu.navbar-default .dropdown-menu > li.open,
-  #main-menu.navbar-default .dropdown-menu > li:hover {
+  #nb2sb-nav.navbar-default .dropdown-menu > li.active,
+  #nb2sb-nav.navbar-default .dropdown-menu > li.open,
+  #nb2sb-nav.navbar-default .dropdown-menu > li:hover {
     border-left-color: #45aed6;
   }
-  #main-menu.navbar-default .dropdown-menu > li.active > a,
-  #main-menu.navbar-default .dropdown-menu > li.open > a,
-  #main-menu.navbar-default .dropdown-menu > li:hover > a {
+  #nb2sb-nav.navbar-default .dropdown-menu > li.active > a,
+  #nb2sb-nav.navbar-default .dropdown-menu > li.open > a,
+  #nb2sb-nav.navbar-default .dropdown-menu > li:hover > a {
     color: #45aed6;
     background-color: transparent;
   }
