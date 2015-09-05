@@ -87,6 +87,8 @@ class Examples extends CI_Controller {
 
 	public function orders_management()
 	{
+			echo "dieudue";
+
 			$crud = new grocery_CRUD();
 
 			$crud->set_relation('customerNumber','customers','{contactLastName} {contactFirstName}');
@@ -97,7 +99,7 @@ class Examples extends CI_Controller {
 			$crud->unset_delete();
 
 			$output = $crud->render();
-
+             
 			$this->_example_output($output);
 	}
 
@@ -224,6 +226,7 @@ class Examples extends CI_Controller {
 
 	public function customers_management2()
 	{
+
 		$crud = new grocery_CRUD();
 
 		$crud->set_table('customers');
@@ -244,5 +247,19 @@ class Examples extends CI_Controller {
 			return $output;
 		}
 	}
+
+	public function user()
+    {
+        $this->grocery_crud->set_table('user');
+        $output = $this->grocery_crud->render();
+ 
+        //echo "<pre>";
+        //print_r($output);
+        //echo "</pre>";
+        //die
+
+         $this->_example_output($output);   
+    }
+    
 
 }
