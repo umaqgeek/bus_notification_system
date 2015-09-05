@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Bootstrap Admin Template : Binary Admin</title>
+    <title>BuNS | Driver Page </title>
 	<!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url().'asset/css/bootstrap.css'; ?>" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Binary admin</a> 
+                <a class="navbar-brand" href="index.html">Driver Profile</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -50,7 +50,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     <li>
                         <a  href="tab-panel.html"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
                     </li>
-						   <li  >
+						   <!--<li  >
                         <a   href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Morris Charts</a>
                     </li>	
                       <li  >
@@ -58,10 +58,10 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                     </li>
                     <li  >
                         <a  href="form.html"><i class="fa fa-edit fa-3x"></i> Forms </a>
-                    </li>				
+                    </li>			-->	
 					
 					                   
-                    <li>
+                   <!-- <li>
                         <a href="#"><i class="fa fa-sitemap fa-3x"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
@@ -90,7 +90,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                       </li>  
                   <li  >
                         <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
-                    </li>	
+                    </li>-->	
                 </ul>
                
             </div>
@@ -101,8 +101,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Admin Dashboard</h2>   
-                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                     <h2>Driver Dashboard</h2>   
+                        <h5>Welcome Amarule , Love to see you back. </h5>
                     </div>
                 </div>              
                  <!-- /. ROW  -->

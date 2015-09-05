@@ -5,7 +5,7 @@ class Test extends CI_Controller
 	function index()
 	{
 		$this->load->helper("url");
-		$this->load->view('hello.php');
+		$this->load->view('register.php');
 	}
 
 	
