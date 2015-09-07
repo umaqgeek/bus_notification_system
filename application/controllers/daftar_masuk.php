@@ -67,6 +67,38 @@ class Daftar_masuk extends CI_Controller
       }  
   }
   
+  public function register()
+  {
+     $this->load->view('form_register');
+  }
+  
+  public function registration()
+  {
+    {
+    $this->load->library('form_validation');
+    // field name, error message, validation rules
+    /*$this->form_validation->set_rules('full_name', 'Full Name', 'trim|required|xss_clean');
+    $this->form_validation->set_rules('ic_no', 'IC No', 'trim|required|xss_clean');
+    $this->form_validation->set_rules('race', 'Race', 'trim|required|xss_clean');
+    $this->form_validation->set_rules('gender', 'Gender', 'trim|required|xss_clean');
+    $this->form_validation->set_rules('address', 'Address', 'trim|required|xss_clean');
+    $this->form_validation->set_rules('religion', 'Religion', 'trim|required|xss_clean');
+    $this->form_validation->set_rules('contact_no', 'Contact No', 'trim|required|max_length[10]|xss_clean');
+    $this->form_validation->set_rules('username', 'User Name', 'trim|required|min_length[4]|xss_clean');
+    $this->form_validation->set_rules('email', 'Your Email', 'trim|required|valid_email');
+    $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
+    $this->form_validation->set_rules('cpassword', 'Password Confirmation', 'trim|required|matches[password]');*/
+
+    if($this->form_validation->run() == FALSE)
+    {
+       $this->load->view('form_register');
+    }
+    else
+    {
+       $this->user_model->add_user();
+    }
+     }
+  }
   
   public function logout()
   {
