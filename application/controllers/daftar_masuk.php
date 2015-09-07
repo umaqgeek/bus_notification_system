@@ -84,6 +84,60 @@ class Daftar_masuk extends CI_Controller
 
          $this->_example_output($output);   
     }
+
+     public function users()
+   {
+        $this->grocery_crud->set_table('users');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+
+  
+
+   public function bus()
+   {
+        $this->grocery_crud->set_table('bus');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+    public function busDriver()
+   {
+        $this->grocery_crud->set_table('bus_driver');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+    public function driverLocation()
+   {
+        $this->grocery_crud->set_table('driver_location');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+
+    public function location()
+   {
+        $this->grocery_crud->set_table('location');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
     
      function _example_output($output = null)
  

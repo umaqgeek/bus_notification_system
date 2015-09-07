@@ -226,8 +226,12 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
+<<<<<<< HEAD
 //$config['encryption_key'] = 'REALLY_LONG_NUMBER';ni untuk username bob dan supersecrer
 $config['encryption_key'] = '1234';
+=======
+$config['encryption_key'] = 'B@sN0t!f1c@T!0nSysT3m';
+>>>>>>> origin/solehin
 
 /*
 |--------------------------------------------------------------------------

@@ -67,8 +67,13 @@ $autoload['libraries'] = array('session','database');
 |	$autoload['helper'] = array('url', 'file');
 */
 
+<<<<<<< HEAD
 //$autoload['helper'] = array('url');
 $autoload['helper'] = array('url','form');
+=======
+$autoload['helper'] = array('url', 'file');
+
+>>>>>>> origin/solehin
 
 /*
 | -------------------------------------------------------------------

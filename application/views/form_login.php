@@ -100,6 +100,7 @@
         <td><select name="level" class="inputan">
         <option value="1">Admin</option>
         <option value="2">Driver</option>
+        <option value="3">Passenger</option>
         </select></td>
        </tr><br/><br/>
          <input type="submit" value=" Login " name="submit"/><br />
