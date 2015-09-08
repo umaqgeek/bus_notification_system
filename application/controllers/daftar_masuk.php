@@ -14,7 +14,7 @@ class Daftar_masuk extends CI_Controller
     
     $this->load->helper('url');
 
-    $this->load->library('grocery_CRUD');
+    $this->load->library('Grocery_CRUD');
     
   }
   
@@ -67,38 +67,6 @@ class Daftar_masuk extends CI_Controller
       }  
   }
   
-  public function register()
-  {
-     $this->load->view('form_register');
-  }
-  
-  public function registration()
-  {
-    {
-    $this->load->library('form_validation');
-    // field name, error message, validation rules
-    /*$this->form_validation->set_rules('full_name', 'Full Name', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('ic_no', 'IC No', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('race', 'Race', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('gender', 'Gender', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('address', 'Address', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('religion', 'Religion', 'trim|required|xss_clean');
-    $this->form_validation->set_rules('contact_no', 'Contact No', 'trim|required|max_length[10]|xss_clean');
-    $this->form_validation->set_rules('username', 'User Name', 'trim|required|min_length[4]|xss_clean');
-    $this->form_validation->set_rules('email', 'Your Email', 'trim|required|valid_email');
-    $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
-    $this->form_validation->set_rules('cpassword', 'Password Confirmation', 'trim|required|matches[password]');*/
-
-    if($this->form_validation->run() == FALSE)
-    {
-       $this->load->view('form_register');
-    }
-    else
-    {
-       $this->user_model->add_user();
-    }
-     }
-  }
   
   public function logout()
   {
@@ -110,6 +78,64 @@ class Daftar_masuk extends CI_Controller
    public function user()
    {
         $this->grocery_crud->set_table('user');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+     public function users()
+   {
+        $this->grocery_crud->set_table('users');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+	function driverDashboard()
+	{
+		$this->load->helper("url");
+		$this->load->view('driverDashboard.php');
+	}
+  
+
+   public function bus()
+   {
+        $this->grocery_crud->set_table('bus');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+    public function busDriver()
+   {
+        $this->grocery_crud->set_table('bus_driver');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+    public function driverLocation()
+   {
+        $this->grocery_crud->set_table('driver_location');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+
+    public function location()
+   {
+        $this->grocery_crud->set_table('location');
         $output = $this->grocery_crud->render();
  
         

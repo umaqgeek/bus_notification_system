@@ -17,6 +17,23 @@ class Sol extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * http://codeigniter.com/user_guide/general/urls.html
 	 */
+<<<<<<< HEAD
+
+	public function index()
+	{
+		
+      // echo "<h1>Welcome to the world of Codeigniter</h1>";
+      // die();
+		$this->load->helper("url");
+		//$this->load->view('welcome_message.php');
+	//$this->load->view('mainpage.php');
+		//$this->load->view('portfolio-details.php');
+	//$this->load->view('home.php');
+	$this->load->view('register.php');
+	}
+
+
+=======
 	public function index()
 	{
 		$this->load->helper("url");
@@ -26,6 +43,7 @@ class Sol extends CI_Controller {
 	$this->load->view('home.php');
 	}
 
+>>>>>>> origin/amarul
 }
 
 /* End of file welcome.php */
