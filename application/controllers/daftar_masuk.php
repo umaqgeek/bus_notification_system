@@ -14,7 +14,7 @@ class Daftar_masuk extends CI_Controller
     
     $this->load->helper('url');
 
-    $this->load->library('Grocery_CRUD');
+    $this->load->library('grocery_CRUD');
     
   }
   
@@ -60,9 +60,9 @@ class Daftar_masuk extends CI_Controller
         }else
         {
          echo " <script>
-		            alert('Gagal Login: Cek username , password dan level anda!');
-		            history.go(-1);
-		          </script>";        
+                alert('Gagal Login: Cek username , password dan level anda!');
+                history.go(-1);
+              </script>";        
         }
       }  
   }
@@ -95,11 +95,11 @@ class Daftar_masuk extends CI_Controller
          $this->_example_output($output);   
     }
 
-	function driverDashboard()
-	{
-		$this->load->helper("url");
-		$this->load->view('driverDashboard.php');
-	}
+  function driverDashboard()
+  {
+    $this->load->helper("url");
+    $this->load->view('driverDashboard.php');
+  }
   
 
    public function bus()
@@ -148,7 +148,6 @@ class Daftar_masuk extends CI_Controller
     {
         $this->load->view('our_templates.php',$output);    
     }
-
 
 }
 

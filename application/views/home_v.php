@@ -8,7 +8,7 @@
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuNS | Admin Page </title>
-	<!-- BOOTSTRAP STYLES-->
+    <!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url().'asset/css/bootstrap.css'; ?>" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="<?php echo base_url().'asset/css/font-awesome.css'; ?>" rel="stylesheet" />
@@ -29,30 +29,33 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Driver Profile</a> 
+                <a class="navbar-brand" href="index.html">Admin Profile</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url ('daftar_masuk/logout', 'Keluar &raquo;');?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url ('daftar_masuk/logout', 'Keluar &raquo;');?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
+                <li class="text-center">
                     <img src="<?php echo base_url().'asset/img/find_user.png'?>" class="user-image img-responsive"/>
-					</li>
-				
+                    </li>
+                
                     <li>
                         <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
                     </li>
                      <li>
-                        <a  href="ui.html"><i class="fa fa-qrcode fa-3x"></i>Scan QR Code</a>
+                        <a  href="ui.html"><i class="fa fa-qrcode fa-3x"></i>Generate QR Code</a>
                     </li>
                     <li>
                         <a  href="tab-panel.html"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
-                    </li> 	
+                    </li>
+                    <li>
+                        <a  href="tab-panel.html"><i class="fa fa-bus"></i>Driver Registration</a>
+                    </li>                   
                 </ul>
                
             </div>
@@ -70,7 +73,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                   <hr />
                 <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-red set-icon">
                     <i class="fa fa-envelope-o"></i>
                 </span>
@@ -79,9 +82,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Messages</p>
                 </div>
              </div>
-		     </div>
+             </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-green set-icon">
                     <i class="fa fa-bars"></i>
                 </span>
@@ -90,9 +93,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Remaining</p>
                 </div>
              </div>
-		     </div>
+             </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-blue set-icon">
                     <i class="fa fa-bell-o"></i>
                 </span>
@@ -101,9 +104,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Notifications</p>
                 </div>
              </div>
-		     </div>
+             </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-brown set-icon">
                     <i class="fa fa-rocket"></i>
                 </span>
@@ -112,13 +115,13 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Pending</p>
                 </div>
              </div>
-		     </div>
-			</div>
+             </div>
+            </div>
                  <!-- /. ROW  -->
                 <hr />                
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-blue">
                     <i class="fa fa-warning"></i>
                 </span>
@@ -135,7 +138,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     </p>
                 </div>
              </div>
-		     </div>
+             </div>
                     
                     
                     <div class="col-md-3 col-sm-12 col-xs-12">
@@ -168,7 +171,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Looking Good</p>
                 </div>
              </div>
-			
+            
     </div>
                         
         </div>
@@ -496,9 +499,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
    
 </body>
 </html>
- <?php echo anchor('daftar_masuk/logout', 'Keluar &raquo;');?></h2>
  <?php
-   redirect('daftar_masuk/user');
+   //redirect('daftar_masuk/user');
  }else if($level == "2") //driver
  {
   ?>
@@ -507,7 +509,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuNS | Driver Page </title>
-	<!-- BOOTSTRAP STYLES-->
+    <!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url().'asset/css/bootstrap.css'; ?>" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="<?php echo base_url().'asset/css/font-awesome.css'; ?>" rel="stylesheet" />
@@ -533,16 +535,16 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url ('daftar_masuk/logout', 'Keluar &raquo;');?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url ('daftar_masuk/logout', 'Keluar &raquo;');?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
+                <li class="text-center">
                     <img src="<?php echo base_url().'asset/img/find_user.png'?>" class="user-image img-responsive"/>
-					</li>
-				
+                    </li>
+                
                     <li>
                         <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
                     </li>
@@ -551,7 +553,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     </li>
                     <li>
                         <a  href="tab-panel.html"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
-                    </li> 	
+                    </li>   
                 </ul>
                
             </div>
@@ -569,7 +571,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                   <hr />
                 <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-red set-icon">
                     <i class="fa fa-envelope-o"></i>
                 </span>
@@ -578,9 +580,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Messages</p>
                 </div>
              </div>
-		     </div>
+             </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-green set-icon">
                     <i class="fa fa-bars"></i>
                 </span>
@@ -589,9 +591,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Remaining</p>
                 </div>
              </div>
-		     </div>
+             </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-blue set-icon">
                     <i class="fa fa-bell-o"></i>
                 </span>
@@ -600,9 +602,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Notifications</p>
                 </div>
              </div>
-		     </div>
+             </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-brown set-icon">
                     <i class="fa fa-rocket"></i>
                 </span>
@@ -611,13 +613,13 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Pending</p>
                 </div>
              </div>
-		     </div>
-			</div>
+             </div>
+            </div>
                  <!-- /. ROW  -->
                 <hr />                
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-blue">
                     <i class="fa fa-warning"></i>
                 </span>
@@ -634,7 +636,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     </p>
                 </div>
              </div>
-		     </div>
+             </div>
                     
                     
                     <div class="col-md-3 col-sm-12 col-xs-12">
@@ -667,7 +669,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Looking Good</p>
                 </div>
              </div>
-			
+            
     </div>
                         
         </div>
@@ -996,6 +998,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
 </body>
 </html>
   <?php
+  //redirect('daftar_masuk/driverDashboard');
  }
  else 
  {
@@ -1005,7 +1008,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuNS | User Page </title>
-	<!-- BOOTSTRAP STYLES-->
+    <!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url().'asset/css/bootstrap.css'; ?>" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="<?php echo base_url().'asset/css/font-awesome.css'; ?>" rel="stylesheet" />
@@ -1026,30 +1029,27 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Driver Profile</a> 
+                <a class="navbar-brand" href="index.html">User Profile</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url ('daftar_masuk/logout', 'Keluar &raquo;');?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url ('daftar_masuk/logout', 'Keluar &raquo;');?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
+                <li class="text-center">
                     <img src="<?php echo base_url().'asset/img/find_user.png'?>" class="user-image img-responsive"/>
-					</li>
-				
+                    </li>
+                
                     <li>
                         <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
                     </li>
-                     <li>
-                        <a  href="ui.html"><i class="fa fa-qrcode fa-3x"></i>Scan QR Code</a>
-                    </li>
                     <li>
                         <a  href="tab-panel.html"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
-                    </li> 	
+                    </li>   
                 </ul>
                
             </div>
@@ -1067,7 +1067,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                   <hr />
                 <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-red set-icon">
                     <i class="fa fa-envelope-o"></i>
                 </span>
@@ -1076,9 +1076,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Messages</p>
                 </div>
              </div>
-		     </div>
+             </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-green set-icon">
                     <i class="fa fa-bars"></i>
                 </span>
@@ -1087,9 +1087,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Remaining</p>
                 </div>
              </div>
-		     </div>
+             </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-blue set-icon">
                     <i class="fa fa-bell-o"></i>
                 </span>
@@ -1098,9 +1098,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Notifications</p>
                 </div>
              </div>
-		     </div>
+             </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-brown set-icon">
                     <i class="fa fa-rocket"></i>
                 </span>
@@ -1109,13 +1109,13 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Pending</p>
                 </div>
              </div>
-		     </div>
-			</div>
+             </div>
+            </div>
                  <!-- /. ROW  -->
                 <hr />                
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">           
-			<div class="panel panel-back noti-box">
+            <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-blue">
                     <i class="fa fa-warning"></i>
                 </span>
@@ -1132,7 +1132,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     </p>
                 </div>
              </div>
-		     </div>
+             </div>
                     
                     
                     <div class="col-md-3 col-sm-12 col-xs-12">
@@ -1165,7 +1165,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <p class="text-muted">Looking Good</p>
                 </div>
              </div>
-			
+            
     </div>
                         
         </div>
@@ -1493,7 +1493,6 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
    
 </body>
 </html>
-  <?php echo anchor('daftar_masuk/logout', 'Keluar &raquo;');?></h2>
   <?php
  }
  ?>
