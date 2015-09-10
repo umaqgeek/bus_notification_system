@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "test";
+$route['default_controller'] = "daftar_masuk";
 $route['404_override'] = '';
 
 
