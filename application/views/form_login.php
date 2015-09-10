@@ -27,7 +27,10 @@
         </select></td>
        </tr><br/><br/>
        <input type="submit" value=" Login " name="submit"/><br />
+
+       does not have an account yet register here <?php echo anchor('daftar_masuk/registration', 'signup &raquo;');?>
  </div>
  </form>
  </body>
  </html>
+        
