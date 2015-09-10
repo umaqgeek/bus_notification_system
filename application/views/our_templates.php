@@ -33,13 +33,13 @@ a:hover
 <body>
 <!-- Beginning header -->
     <div>
-      <!--  <a href='<?php echo site_url('examples/offices_management')?>'>Offices</a> | 
+       <a href='<?php echo site_url('examples/offices_management')?>'>Offices</a> | 
         <a href='<?php echo site_url('examples/employees_management')?>'>Employees</a> |
         <a href='<?php echo site_url('examples/customers_management')?>'>Customers</a> |
         <a href='<?php echo site_url('examples/orders_management')?>'>Orders</a> |
         <a href='<?php echo site_url('examples/products_management')?>'>Products</a> | 
-        <a href='<?php echo site_url('examples/film_management')?>'>Films</a> |-->
-         <a href='<?php echo site_url('daftar_masuk/bus')?>'>Bus</a> |
+        <a href='<?php echo site_url('examples/film_management')?>'>Films</a> |
+        <!-- <a href='<?php echo site_url('daftar_masuk/bus')?>'>Bus</a> |
          <a href='<?php echo site_url('daftar_masuk/busDriver')?>'>Bus Driver</a> |
          <a href='<?php echo site_url('daftar_masuk/driverLocation')?>'>Driver Location</a> |
          <a href='<?php echo site_url('daftar_masuk/location')?>'>location </a> |
@@ -47,8 +47,9 @@ a:hover
          <a href='<?php echo site_url('daftar_masuk/users')?>'>Users</a> |
 
          <!--<a href='<?php //echo site_url('examples/user')?>'>location Type</a> |-->
-         <a href='<?php echo site_url('examples/user')?>'>QR Bus Generator </a> |
-         <a href='<?php echo site_url('daftar_masuk/login_form')?>'>logout </a> 
+         <a href='<?php echo site_url('daftar_masuk/QR_code')?>'>QR Bus Generator </a> |
+         <a href='<?php echo site_url('daftar_masuk/login_form')?>'>logout </a> -->
+
  
     </div>
 <!-- End of header-->
