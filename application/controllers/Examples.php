@@ -248,9 +248,19 @@ class Examples extends CI_Controller {
 		}
 	}
 
-	
 
+	public function user()
+    {
+        $this->grocery_crud->set_table('user');
+        $output = $this->grocery_crud->render();
+ 
+        //echo "<pre>";
+        //print_r($output);
+        //echo "</pre>";
+        //die
 
+         $this->_example_output($output);   
+    }
     
 
 }
