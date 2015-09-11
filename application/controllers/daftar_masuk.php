@@ -8,7 +8,7 @@ class Daftar_masuk extends CI_Controller
     
     $this->load->model('m_login');
     
-    $this->load->library(array('form_validation','session'));
+    //$this->load->library(array('form_validation','session'));
     
     $this->load->database();
     
@@ -25,12 +25,16 @@ class Daftar_masuk extends CI_Controller
     
       if($session == FALSE)
       {
-        redirect('daftar_masuk/login_form');
+        redirect(site_url 'daftar_masuk/login_form');
       }else
       {
         redirect('tapak');
       }
   }
+
+   
+
+
   
   
   public function login_form()
