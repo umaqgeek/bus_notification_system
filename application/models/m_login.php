@@ -44,11 +44,14 @@ class M_login extends CI_Model
                  'contact_no'=>$this->input->post('contact_num'),
                  'username'=>$this->input->post('user_name'),
                  'email'=>$this->input->post('email_address'),
-                 'password'=>md5($this->input->post('password'))
+                 'password'=>md5($this->input->post('password')),
+         'level'=>$this->input->post('3'),
+         'status'=>$this->input->post('1')
                  );
      $this->db->insert('user',$data);
      return true;
   }
+  
 }  
 
 ?>

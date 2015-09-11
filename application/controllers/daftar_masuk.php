@@ -66,7 +66,7 @@ class Daftar_masuk extends CI_Controller
         }
       }  
   }
-
+  
   public function register()
  {
   $this->load->view('registration_view');//loads the register_view.php file in views folder
@@ -77,10 +77,11 @@ class Daftar_masuk extends CI_Controller
   $this->load->library('form_validation');
   // field name, error message, validation rules
   $this->form_validation->set_rules('ic_no', 'Ic No', 'trim|required|min_length[5]|xss_clean');
-  //$this->form_validation->set_rules('full_name', 'Full Name', 'trim|required|min_length[5]|xss_clean');
+  $this->form_validation->set_rules('full_name', 'Full Name', 'trim|required|min_length[5]|xss_clean');
+  $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[5]|xss_clean');
   $this->form_validation->set_rules('contact_num', 'Contact Number', 'trim|required|min_length[5]|xss_clean');
   $this->form_validation->set_rules('user_name', 'User Name', 'trim|required|min_length[4]|xss_clean');
-  $this->form_validation->set_rules('email_address', 'Your Email', 'trim|required|valid_email');
+  $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|min_length[5]|xss_clean');
   $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
   $this->form_validation->set_rules('con_password', 'Password Confirmation', 'trim|required|matches[password]');
   $this->form_validation->set_rules('gender', 'Gender', 'trim|required|""');
@@ -97,7 +98,7 @@ class Daftar_masuk extends CI_Controller
    $this->load->view('success');
   }
  }
- 
+  
   public function logout()
   {
    $this->session->sess_destroy();
@@ -115,15 +116,21 @@ class Daftar_masuk extends CI_Controller
          $this->_example_output($output);   
     }
 
-    // public function users()
-   //{
-      //  $this->grocery_crud->set_table('users');
-       // $output = $this->grocery_crud->render();
+   /*public function users()
+   {
+        $this->grocery_crud->set_table('users');
+        $output = $this->grocery_crud->render();
  
         
 
-         //$this->_example_output($output);   
-    //}
+         $this->_example_output($output);   
+    }*/
+
+  function driverDashboard()
+  {
+    $this->load->helper("url");
+    $this->load->view('driverDashboard.php');
+  }
   
 
    public function bus()
@@ -166,23 +173,12 @@ class Daftar_masuk extends CI_Controller
 
          $this->_example_output($output);   
     }
-
-    public function QR()
-   {
-        //$this->grocery_crud->set_table('location');
-        //$output = $this->grocery_crud->render();
-        redirect('qr_code_generate');
-        
-
-         $this->_example_output($output);   
+    
+     function _example_output($output = null)
+ 
+    {
+        $this->load->view('our_templates.php',$output);    
     }
-
-
-    public function _example_output($output = null)
-      {
-            $this->load->view('example.php',$output);
-      }
-  
 
 }
 
