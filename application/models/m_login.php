@@ -26,6 +26,13 @@ class M_login extends CI_Model
   {
    $this->db->select('username');
    $this->db->select('full_name');
+   $this->db->select('address');
+   $this->db->select('ic_no');
+   $this->db->select('contact_no');
+   $this->db->select('email');
+   $this->db->select('gender');
+   $this->db->select('race');
+   $this->db->select('religion');
    $this->db->where('username', $username);
    $query = $this->db->get('user');
    
