@@ -55,19 +55,71 @@ class Qr_code_generate extends CI_Controller {
 			$this->ci_qr_code->initialize($qr_code_config);
 
 			$image_name = 'qr_code_test.png';
+			$phoneNo = '(049)011-1068-7851';
+			$avatarJpegFileName = 'uitm_logo.jpg'; 
+			$name = 'hatta muhd'; 
+            $sortName = 'muhd;hatta'; 
+            $phone = '(049)012-345-678'; 
+            $phonePrivate = '(049)012-345-987'; 
+            $phoneCell = '(049)888-123-123'; 
+            $orgName = 'tuffah inc.'; 
+            $email = 'hatta@example.com'; 
 
-			$params['data'] = 'This QR Code was generated at ' . site_url() . $this->_method_url;
+            // if not used - leave blank! 
+            $addressLabel = 'Our Office'; 
+            $addressPobox = ''; 
+            $addressExt = 'Suite 123'; 
+            $addressStreet = '7th Avenue'; 
+            $addressTown = 'melaka'; 
+            $addressRegion = 'jasin'; 
+            $addressPostCode = '91921-1234'; 
+            $addressCountry = 'malaysia'; 
+
+            // we building raw data 
+            $codeContents  = 'BEGIN:VCARD'."\n"; 
+            $codeContents .= 'VERSION:2.1'."\n"; 
+            $codeContents .= 'PHOTO;JPEG;ENCODING=BASE64:'.base64_encode(file_get_contents($avatarJpegFileName))."\n"; 
+            $codeContents .= 'N:'.$sortName."\n"; 
+            $codeContents .= 'FN:'.$name."\n"; 
+            $codeContents .= 'ORG:'.$orgName."\n"; 
+            $codeContents .= 'TEL;WORK;VOICE:'.$phone."\n"; 
+            $codeContents .= 'TEL;HOME;VOICE:'.$phonePrivate."\n"; 
+            $codeContents .= 'TEL;TYPE=cell:'.$phoneCell."\n"; 
+            $codeContents .= 'ADR;TYPE=work;'. 
+                             'LABEL="'.$addressLabel.'":' 
+                                      .$addressPobox.';' 
+                                      .$addressExt.';' 
+                                      .$addressStreet.';' 
+                                      .$addressTown.';' 
+                                      .$addressPostCode.';' 
+                                      .$addressCountry 
+                                       ."\n"; 
+            $codeContents .= 'EMAIL:'.$email."\n"; 
+            $codeContents .= 'END:VCARD';  
+             // we building raw data 
+           // $codeContents = 'tel:'.$phoneNo; 
+            
+
+
+            $params['data'] = ($codeContents); 
+           
+			//$params['data'] = 'This QR Code was generated at ' . site_url() . $this->_method_url;
 			$params['level'] = ($this->input->post('level')) ? $this->input->post('level') : 'H';
 			$params['size'] = ($this->input->post('size')) ? $this->input->post('size') : 10;
+			
+            
+
 
 			if($this->input->post('display_format') == 'image')
 			{
 				$params['savename'] = FCPATH.$qr_code_config['imagedir'].$image_name;
 				$this->ci_qr_code->generate($params); 
 				$this->data['qr_code_image_url'] = base_url().$qr_code_config['imagedir'].$image_name;
+				//$this->data1['qr_code_image_url'] = base_url().$qr_code_config['imagedir'].$image_name;
 				// Display the QR Code here on browser uncomment the below line
 				//echo '<img src="'.base_url().$qr_code_config['imagedir'].$image_name.'" />'; 
 				$this->load->view('qr_code', $this->data); 
+				//$this->load->view('qr_code', $this->data1);
 			}
 			else
 			{
