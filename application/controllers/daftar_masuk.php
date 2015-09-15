@@ -111,27 +111,63 @@ class Daftar_masuk extends CI_Controller
         $this->grocery_crud->set_table('user');
         $output = $this->grocery_crud->render();
  
-        
-
          $this->_example_output($output);   
     }
 
-   /*public function users()
-   {
-        $this->grocery_crud->set_table('users');
-        $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
-    }*/
-
-  function driverDashboard()
+  function admin_generate()
   {
     $this->load->helper("url");
-    $this->load->view('driverDashboard.php');
+    $this->load->view('admin_generate.php');
   }
-  
+
+  function admin_locate()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_locate.php');
+  }
+
+  function admin_locate()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_locate.php');
+  }
+
+  function admin_locatetype()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_locatetype.php');
+  }
+
+  function admin_manage()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_manage.php');
+  }
+
+  function driver_scan()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_scan.php');
+  }
+
+  function driver_view()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_view.php');
+  }
+
+  function driver_selbus()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_selbus.php');
+  }
+
+
+  function user_view()
+  {
+    $this->load->helper("url");
+    $this->load->view('user_view.php');
+  }
 
    public function bus()
    {
