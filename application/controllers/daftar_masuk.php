@@ -25,7 +25,7 @@ class Daftar_masuk extends CI_Controller
     
       if($session == FALSE)
       {
-        redirect(site_url 'daftar_masuk/login_form');
+        redirect('daftar_masuk/login_form');
       }else
       {
         redirect('tapak');
