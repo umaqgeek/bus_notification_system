@@ -1,41 +1,4 @@
-<!--<html>
- <head>
-  <title>Selamat Datang Friend</title> 
- <style>
- body
-   {
-    font-family:Calibri;
-   }
- </style>  
- </head>
- <body>
- <?php
-  if($level == "1")
-  {
- ?>
- <h2>Hai <?php echo $pengguna->nama;?>, anda login sebagai Administrator 
- <?php echo anchor('daftar_masuk/logout', 'Keluar &raquo;');?></h2>
- <?php
-   redirect('daftar_masuk/user');
- }else if($level == "2")
- {
-  ?>
-  <h2>Hai <?php echo $pengguna->nama;?>, anda login sebagai driver
-  <?php echo anchor('daftar_masuk/logout', 'Keluar &raquo;');?></h2>
-  <?php
- }
- else 
- {
-  ?>
-  <h2>Hai <?php echo $pengguna->nama;?>, anda login sebagai passenger
-  <?php echo anchor('daftar_masuk/logout', 'Keluar &raquo;');?></h2>
-  <?php
- }
- ?>
- </body>
-</html>-->
-
- <?php
+<?php
   if($level == "1") //admin
   {
  ?>
@@ -65,12 +28,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Driver Profile</a> 
+                <a class="navbar-brand" href="index.html">Admin Page</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url ('daftar_masuk/logout', 'Keluar &raquo;');?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url ('daftar_masuk/logout', 'Keluar &raquo;');?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
@@ -99,20 +62,20 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Welcome <?php echo $pengguna->nama;?> , Love to see you back.</h2>   
+                     <h2>Welcome <?php echo $pengguna->username;?> , Love to see you back.</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
-                  <hr />
-                <div class="row">
+                 
+                <!--<div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">           
       <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-red set-icon">
                     <i class="fa fa-envelope-o"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">120 New</p>
-                    <p class="text-muted">Messages</p>
+                    <p class="main-text">Full Name</p>
+                    <br /><p class="text-muted"><?php echo $pengguna->full_name;?></p>
                 </div>
              </div>
          </div>
@@ -122,8 +85,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <i class="fa fa-bars"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">30 Tasks</p>
-                    <p class="text-muted">Remaining</p>
+                    <p class="main-text">Address</p>
+                    <p class="text-muted"><?php echo $pengguna->address;?></p>
                 </div>
              </div>
          </div>
@@ -133,27 +96,60 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <i class="fa fa-bell-o"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">240 New</p>
-                    <p class="text-muted">Notifications</p>
+                    <p class="main-text">IC Number</p>
+                    <p class="text-muted"><?php echo $pengguna->ic_no;?></p>
                 </div>
              </div>
          </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-      <div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-brown set-icon">
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
                     <i class="fa fa-rocket"></i>
-                </span>
-                <div class="text-box" >
-                    <p class="main-text">3 Orders</p>
-                    <p class="text-muted">Pending</p>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Contact Number</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
                 </div>
              </div>
          </div>
-      </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Race</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                </div>
+             </div>
+         </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Gender</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                </div>
+             </div>
+         </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Religion</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                </div>
+             </div>
+         </div>
+      </div>-->
                  <!-- /. ROW  -->
                 <hr />                
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">           
+                    <!--<div class="col-md-6 col-sm-12 col-xs-12">           
       <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-blue">
                     <i class="fa fa-warning"></i>
@@ -171,17 +167,76 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     </p>
                 </div>
              </div>
-         </div>
-                    
-                    
+         </div>-->
+ 
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="panel back-dash">
-                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; SPEED</strong>
-                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing sit ametsit amet elit ftr. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Full Name</strong>
+                             <p class="text-muted"><?php echo $pengguna->full_name;?></p>
                         </div>
-                       
                     </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12 ">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Address</strong>
+                             <p class="text-muted"><?php echo $pengguna->address;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; IC Number</strong>
+                             <p class="text-muted"><?php echo $pengguna->ic_no;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Contact Number</strong>
+                             <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Email Address</strong>
+                             <p class="text-muted"><?php echo $pengguna->email;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Gender</strong>
+                             <p class="text-muted"><?php if($pengguna->gender == 0)
+                                                        {
+                                                        echo "Male";
+                                                        }
+                                                        else
+                                                        {
+                                                        echo "Female";}?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Race</strong>
+                             <p class="text-muted"><?php if($pengguna->race == 1)
+                                                        {
+                                                        echo "Melayu";
+                                                        }
+                                                        else
+                                                        {
+                                                        echo "Cina";}?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Religion</strong>
+                             <p class="text-muted"><?php if($pengguna->religion == 1)
+                                                        {
+                                                        echo "Islam";
+                                                        }
+                                                        else
+                                                        {
+                                                        echo "Kristian";}?></p>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="col-md-3 col-sm-12 col-xs-12 ">
                         <div class="panel ">
           <div class="main-temp-back">
             <div class="panel-body">
@@ -205,14 +260,14 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                 </div>
              </div>
       
-    </div>
+    </div>-->
                         
         </div>
                  <!-- /. ROW  -->
-                <div class="row"> 
+                <!--<div class="row"> 
                     
                       
-                               <div class="col-md-9 col-sm-12 col-xs-12">                     
+                               <!--<div class="col-md-9 col-sm-12 col-xs-12">                     
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Bar Chart Example
@@ -245,8 +300,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     </div>                         
                         </div>
                 
-           </div>
-                 <!-- /. ROW  -->
+           </div>-->
+                 <!-- /. ROW  
                 <div class="row" >
                     <div class="col-md-3 col-sm-12 col-xs-12">
   <div class="panel panel-primary text-center no-boder bg-color-green">
@@ -331,8 +386,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     </div>
                     
                     </div>
-                </div>
-                 <!-- /. ROW  -->
+                </div>-->
+                 <!-- /. ROW  
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                    
@@ -508,7 +563,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     </div>
                       
                     </div>
-                </div>     
+                </div>   -->  
                  <!-- /. ROW  -->           
     </div>
              <!-- /. PAGE INNER  -->
@@ -532,16 +587,12 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
    
 </body>
 </html>
- <?php echo anchor('daftar_masuk/logout', 'Keluar &raquo;');?></h2>
  <?php
-   redirect('daftar_masuk/user');
  }else if($level == "2") //driver
  {
-
-  ?>
+?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
- 
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuNS | Driver Page </title>
@@ -566,7 +617,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo base_url
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Driver Profile</a> 
+                <a class="navbar-brand" href="index.html">Driver Page</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -600,20 +651,20 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Welcome <?php echo $pengguna->full_name;?> , Love to see you back.</h2>   
+                     <h2>Welcome <?php echo $pengguna->username;?> , Love to see you back.</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
-                  <hr />
-                <div class="row">
+                 
+                <!--<div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">           
       <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-red set-icon">
                     <i class="fa fa-envelope-o"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">120 New</p>
-                    <p class="text-muted">Messages</p>
+                    <p class="main-text">Full Name</p>
+                    <br /><p class="text-muted"><?php echo $pengguna->full_name;?></p>
                 </div>
              </div>
          </div>
@@ -623,8 +674,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     <i class="fa fa-bars"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">30 Tasks</p>
-                    <p class="text-muted">Remaining</p>
+                    <p class="main-text">Address</p>
+                    <p class="text-muted"><?php echo $pengguna->address;?></p>
                 </div>
              </div>
          </div>
@@ -634,27 +685,60 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     <i class="fa fa-bell-o"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">240 New</p>
-                    <p class="text-muted">Notifications</p>
+                    <p class="main-text">IC Number</p>
+                    <p class="text-muted"><?php echo $pengguna->ic_no;?></p>
                 </div>
              </div>
          </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-      <div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-brown set-icon">
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
                     <i class="fa fa-rocket"></i>
-                </span>
-                <div class="text-box" >
-                    <p class="main-text">3 Orders</p>
-                    <p class="text-muted">Pending</p>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Contact Number</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
                 </div>
              </div>
          </div>
-      </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Race</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                </div>
+             </div>
+         </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Gender</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                </div>
+             </div>
+         </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Religion</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                </div>
+             </div>
+         </div>
+      </div>-->
                  <!-- /. ROW  -->
                 <hr />                
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">           
+                    <!--<div class="col-md-6 col-sm-12 col-xs-12">           
       <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-blue">
                     <i class="fa fa-warning"></i>
@@ -672,17 +756,76 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </p>
                 </div>
              </div>
-         </div>
-                    
-                    
+         </div>-->
+ 
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="panel back-dash">
-                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; SPEED</strong>
-                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing sit ametsit amet elit ftr. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Full Name</strong>
+                             <p class="text-muted"><?php echo $pengguna->full_name;?></p>
                         </div>
-                       
                     </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12 ">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Address</strong>
+                             <p class="text-muted"><?php echo $pengguna->address;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; IC Number</strong>
+                             <p class="text-muted"><?php echo $pengguna->ic_no;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Contact Number</strong>
+                             <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Email Address</strong>
+                             <p class="text-muted"><?php echo $pengguna->email;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Gender</strong>
+                             <p class="text-muted"><?php if($pengguna->gender == 0)
+                                                        {
+                                                        echo "Male";
+                                                        }
+                                                        else
+                                                        {
+                                                        echo "Female";}?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Race</strong>
+                             <p class="text-muted"><?php if($pengguna->race == 1)
+                                                        {
+                                                        echo "Melayu";
+                                                        }
+                                                        else
+                                                        {
+                                                        echo "Cina";}?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Religion</strong>
+                             <p class="text-muted"><?php if($pengguna->religion == 1)
+                                                        {
+                                                        echo "Islam";
+                                                        }
+                                                        else
+                                                        {
+                                                        echo "Kristian";}?></p>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="col-md-3 col-sm-12 col-xs-12 ">
                         <div class="panel ">
           <div class="main-temp-back">
             <div class="panel-body">
@@ -706,14 +849,14 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                 </div>
              </div>
       
-    </div>
+    </div>-->
                         
         </div>
                  <!-- /. ROW  -->
-                <div class="row"> 
+                <!--<div class="row"> 
                     
                       
-                               <div class="col-md-9 col-sm-12 col-xs-12">                     
+                               <!--<div class="col-md-9 col-sm-12 col-xs-12">                     
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Bar Chart Example
@@ -746,8 +889,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </div>                         
                         </div>
                 
-           </div>
-                 <!-- /. ROW  -->
+           </div>-->
+                 <!-- /. ROW  
                 <div class="row" >
                     <div class="col-md-3 col-sm-12 col-xs-12">
   <div class="panel panel-primary text-center no-boder bg-color-green">
@@ -832,8 +975,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </div>
                     
                     </div>
-                </div>
-                 <!-- /. ROW  -->
+                </div>-->
+                 <!-- /. ROW  
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                    
@@ -1009,7 +1152,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </div>
                       
                     </div>
-                </div>     
+                </div>   -->  
                  <!-- /. ROW  -->           
     </div>
              <!-- /. PAGE INNER  -->
@@ -1064,7 +1207,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Driver Profile</a> 
+                <a class="navbar-brand" href="index.html">User Page</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -1082,12 +1225,9 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     <li>
                         <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
                     </li>
-                     <li>
-                        <a  href="ui.html"><i class="fa fa-qrcode fa-3x"></i>Scan QR Code</a>
-                    </li>
                     <li>
                         <a  href="tab-panel.html"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
-                    </li>   
+                    </li>     
                 </ul>
                
             </div>
@@ -1098,20 +1238,20 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Welcome <?php echo $pengguna->full_name;?> , Love to see you back.</h2>   
+                     <h2>Welcome <?php echo $pengguna->username;?> , Love to see you back.</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
-                  <hr />
-                <div class="row">
+                 
+                <!--<div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">           
       <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-red set-icon">
                     <i class="fa fa-envelope-o"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">120 New</p>
-                    <p class="text-muted">Messages</p>
+                    <p class="main-text">Full Name</p>
+                    <br /><p class="text-muted"><?php echo $pengguna->full_name;?></p>
                 </div>
              </div>
          </div>
@@ -1121,8 +1261,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     <i class="fa fa-bars"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">30 Tasks</p>
-                    <p class="text-muted">Remaining</p>
+                    <p class="main-text">Address</p>
+                    <p class="text-muted"><?php echo $pengguna->address;?></p>
                 </div>
              </div>
          </div>
@@ -1132,27 +1272,60 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     <i class="fa fa-bell-o"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">240 New</p>
-                    <p class="text-muted">Notifications</p>
+                    <p class="main-text">IC Number</p>
+                    <p class="text-muted"><?php echo $pengguna->ic_no;?></p>
                 </div>
              </div>
          </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">           
-      <div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-brown set-icon">
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
                     <i class="fa fa-rocket"></i>
-                </span>
-                <div class="text-box" >
-                    <p class="main-text">3 Orders</p>
-                    <p class="text-muted">Pending</p>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Contact Number</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
                 </div>
              </div>
          </div>
-      </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Race</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                </div>
+             </div>
+         </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Gender</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                </div>
+             </div>
+         </div>
+         <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="panel panel-back noti-box">
+                    <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                    </span>
+                    <div class="text-box" >
+                    <p class="main-text">Religion</p>
+                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                </div>
+             </div>
+         </div>
+      </div>-->
                  <!-- /. ROW  -->
                 <hr />                
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">           
+                    <!--<div class="col-md-6 col-sm-12 col-xs-12">           
       <div class="panel panel-back noti-box">
                 <span class="icon-box bg-color-blue">
                     <i class="fa fa-warning"></i>
@@ -1170,17 +1343,76 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </p>
                 </div>
              </div>
-         </div>
-                    
-                    
+         </div>-->
+ 
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="panel back-dash">
-                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; SPEED</strong>
-                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing sit ametsit amet elit ftr. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Full Name</strong>
+                             <p class="text-muted"><?php echo $pengguna->full_name;?></p>
                         </div>
-                       
                     </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12 ">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Address</strong>
+                             <p class="text-muted"><?php echo $pengguna->address;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; IC Number</strong>
+                             <p class="text-muted"><?php echo $pengguna->ic_no;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Contact Number</strong>
+                             <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Email Address</strong>
+                             <p class="text-muted"><?php echo $pengguna->email;?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Gender</strong>
+                             <p class="text-muted"><?php if($pengguna->gender == 0)
+                                                        {
+                                                        echo "Male";
+                                                        }
+                                                        else
+                                                        {
+                                                        echo "Female";}?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Race</strong>
+                             <p class="text-muted"><?php if($pengguna->race == 1)
+                                                        {
+                                                        echo "Melayu";
+                                                        }
+                                                        else
+                                                        {
+                                                        echo "Cina";}?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Religion</strong>
+                             <p class="text-muted"><?php if($pengguna->religion == 1)
+                                                        {
+                                                        echo "Islam";
+                                                        }
+                                                        else
+                                                        {
+                                                        echo "Kristian";}?></p>
+                        </div>
+                    </div>
+                    
+                    <!--<div class="col-md-3 col-sm-12 col-xs-12 ">
                         <div class="panel ">
           <div class="main-temp-back">
             <div class="panel-body">
@@ -1204,14 +1436,14 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                 </div>
              </div>
       
-    </div>
+    </div>-->
                         
         </div>
                  <!-- /. ROW  -->
-                <div class="row"> 
+                <!--<div class="row"> 
                     
                       
-                               <div class="col-md-9 col-sm-12 col-xs-12">                     
+                               <!--<div class="col-md-9 col-sm-12 col-xs-12">                     
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             Bar Chart Example
@@ -1244,8 +1476,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </div>                         
                         </div>
                 
-           </div>
-                 <!-- /. ROW  -->
+           </div>-->
+                 <!-- /. ROW  
                 <div class="row" >
                     <div class="col-md-3 col-sm-12 col-xs-12">
   <div class="panel panel-primary text-center no-boder bg-color-green">
@@ -1330,8 +1562,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </div>
                     
                     </div>
-                </div>
-                 <!-- /. ROW  -->
+                </div>-->
+                 <!-- /. ROW  
                 <div class="row">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                    
@@ -1507,7 +1739,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </div>
                       
                     </div>
-                </div>     
+                </div>   -->  
                  <!-- /. ROW  -->           
     </div>
              <!-- /. PAGE INNER  -->
@@ -1531,7 +1763,6 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
    
 </body>
 </html>
-  <?php echo anchor('daftar_masuk/logout', 'Keluar &raquo;');?></h2>
   <?php
  }
  ?>

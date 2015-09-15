@@ -26,6 +26,13 @@ class M_login extends CI_Model
   {
    $this->db->select('username');
    $this->db->select('full_name');
+   $this->db->select('address');
+   $this->db->select('ic_no');
+   $this->db->select('contact_no');
+   $this->db->select('email');
+   $this->db->select('gender');
+   $this->db->select('race');
+   $this->db->select('religion');
    $this->db->where('username', $username);
    $query = $this->db->get('user');
    
@@ -44,11 +51,14 @@ class M_login extends CI_Model
                  'contact_no'=>$this->input->post('contact_num'),
                  'username'=>$this->input->post('user_name'),
                  'email'=>$this->input->post('email_address'),
-                 'password'=>md5($this->input->post('password'))
+                 'password'=>md5($this->input->post('password')),
+         'level'=>$this->input->post('3'),
+         'status'=>$this->input->post('1')
                  );
      $this->db->insert('user',$data);
      return true;
   }
+  
 }  
 
 ?>

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Sol extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -15,12 +15,19 @@ class Welcome extends CI_Controller {
 	 *
 	 * So any other public methods not prefixed with an underscore will
 	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
+	 * http://codeigniter.com/user_guide/general/urls.html
 	 */
+
+
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->helper("url");
+		//$this->load->view('welcome_message.php');
+		//$this->load->view('mainpage.php');
+		//$this->load->view('portfolio-details.php');
+	$this->load->view('home.php');
 	}
+
 }
 
 /* End of file welcome.php */
