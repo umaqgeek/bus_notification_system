@@ -2,8 +2,8 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BuNS | Location Type </title>
-  <!-- BOOTSTRAP STYLES-->
+    <title>BuNS | Generate QR Code </title>
+	<!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url().'asset/css/bootstrap.css'; ?>" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="<?php echo base_url().'asset/css/font-awesome.css'; ?>" rel="stylesheet" />
@@ -35,39 +35,31 @@ font-size: 16px;"> Last access : 31 May 2014 &nbsp; <a href="<?php echo site_url
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-        <li class="text-center">
+				            <li class="text-center">
                     <img src="<?php echo base_url().'asset/img/find_user.png'?>" class="user-image img-responsive"/>
-          </li>
-                   <li>
+					         </li>
+                    <li>
                         <a href="<?php echo site_url ('daftar_masuk/index');?>"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
                     </li>
                      <li>
-                        <a href="<?php echo site_url ('daftar_masuk/admin_generate');?>"><i class="fa fa-qrcode fa-3x"></i>Generate QR Code</a>
+                        <a class="active-menu" href="<?php echo site_url ('daftar_masuk/driver_bus');?>"><i class="fa fa-male fa-3x"></i>Select Bus</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url ('daftar_masuk/admin_locate');?>"><i class="fa fa-location-arrow fa-3x"></i>Manage Location</a>
-                    </li>
-                    <li>
-                        <a class="active-menu" href="<?php echo site_url ('daftar_masuk/admin_locatetype');?>"><i class="fa fa-thumb-tack fa-3x"></i>Manage Location Type</a>
-                    </li>   
-                    <li>
-                        <a href="<?php echo site_url ('daftar_masuk/admin_manage');?>"><i class="fa fa-users fa-3x"></i>Manage User</a>
-                    </li>   
+                        <a href="<?php echo site_url ('daftar_masuk/driver_maps');?>"><i class="fa fa-map-marker fa-3x"></i>View Maps</a>
+                    </li> 
                 </ul>
-               
             </div>
-            
         </nav>  
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Location Type</h2>   
+                     <h2>Select Bus</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
-         <hr />
+				 <hr />
                   <!--<center><img src="<?php echo base_url().'asset/img/buns_map.jpg'?>" width="1000" height="660" alt=""/></center>
                 --><hr />                         
     </div>

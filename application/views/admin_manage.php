@@ -2,7 +2,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BuNS | Generate QR Code </title>
+    <title>BuNS | Manage User </title>
   <!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url().'asset/css/bootstrap.css'; ?>" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
@@ -45,13 +45,13 @@ font-size: 16px;"> Last access : 31 May 2014 &nbsp; <a href="<?php echo site_url
                         <a href="<?php echo site_url ('daftar_masuk/admin_generate');?>"><i class="fa fa-qrcode fa-3x"></i>Generate QR Code</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url ('daftar_masuk/admin_locate');?>"><i class="fa fa-map-marker fa-3x"></i>Manage Location</a>
+                        <a href="<?php echo site_url ('daftar_masuk/admin_locate');?>"><i class="fa fa-location-arrow fa-3x"></i>Manage Location</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url ('daftar_masuk/admin_locatetype');?>"><i class="fa fa-map-marker fa-3x"></i>Manage Location Type</a>
+                        <a href="<?php echo site_url ('daftar_masuk/admin_locatetype');?>"><i class="fa fa-thumb-tack fa-3x"></i>Manage Location Type</a>
                     </li>   
                     <li>
-                        <a class="active-menu" href="<?php echo site_url ('daftar_masuk/admin_manage');?>"><i class="fa fa-map-marker fa-3x"></i>Manage User</a>
+                        <a class="active-menu" href="<?php echo site_url ('daftar_masuk/admin_manage');?>"><i class="fa fa-users fa-3x"></i>Manage User</a>
                     </li>   
                 </ul>
                
@@ -63,7 +63,7 @@ font-size: 16px;"> Last access : 31 May 2014 &nbsp; <a href="<?php echo site_url
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>View Maps</h2>   
+                     <h2>Manage User</h2>   
                     </div>
                 </div>              
                  <!-- /. ROW  -->
