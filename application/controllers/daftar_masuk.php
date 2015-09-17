@@ -60,7 +60,7 @@ class Daftar_masuk extends CI_Controller
         }else
         {
          echo " <script>
-                alert('Gagal Login: Cek username , password dan level anda!');
+                alert('Please check your username, password and level.');
                 history.go(-1);
               </script>";        
         }
@@ -129,11 +129,15 @@ class Daftar_masuk extends CI_Controller
          $this->_example_output($output);   
     }
 
+<<<<<<< HEAD
 
   function driverDashboard()
+=======
+  function user_view()
+>>>>>>> origin/amarul
   {
     $this->load->helper("url");
-    $this->load->view('driverDashboard.php');
+    $this->load->view('user_view.php');
   }
   
 
@@ -198,6 +202,48 @@ class Daftar_masuk extends CI_Controller
     {
         $this->load->view('our_templates.php',$output);    
     }
+  
+  function admin_generate()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_generate.php');
+  }
+
+  function admin_locate()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_locate.php');
+  }
+
+  function admin_locatetype()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_locatetype.php');
+  }
+
+  function admin_manage()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_manage.php');
+  }
+  
+  function driver_bus()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_bus.php');
+  }
+  
+  function driver_scan()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_scan.php');
+  }
+  
+  function driver_maps()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_maps.php');
+  }
 
 }
 
