@@ -32,11 +32,7 @@ class Daftar_masuk extends CI_Controller
       }
   }
 
-   
-
-
-  
-  
+    
   public function login_form()
   {
     $this->form_validation->set_rules('username', 'Username', 'required|trim|xss_clean');
@@ -71,10 +67,12 @@ class Daftar_masuk extends CI_Controller
       }  
   }
   
+
   public function register()
  {
   $this->load->view('registration_view');//loads the register_view.php file in views folder
  }
+  
   
   public function registration()
  {
@@ -102,7 +100,17 @@ class Daftar_masuk extends CI_Controller
    $this->load->view('success');
   }
  }
+
   
+   public function choose_bus()
+   {
+      if($this->form_validation->run()==FALSE)
+      {
+        $this->load->view('bus_choose');
+      }
+   }
+  
+
   public function logout()
   {
    $this->session->sess_destroy();
@@ -110,6 +118,7 @@ class Daftar_masuk extends CI_Controller
    redirect('daftar_masuk/login_form');
   }  
 
+  
    public function user()
    {
         $this->grocery_crud->set_table('user');
@@ -120,15 +129,6 @@ class Daftar_masuk extends CI_Controller
          $this->_example_output($output);   
     }
 
-   /*public function users()
-   {
-        $this->grocery_crud->set_table('users');
-        $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
-    }*/
 
   function driverDashboard()
   {
@@ -146,6 +146,9 @@ class Daftar_masuk extends CI_Controller
 
          $this->_example_output($output);   
     }
+
+ 
+
 
     public function busDriver()
    {
@@ -166,6 +169,18 @@ class Daftar_masuk extends CI_Controller
 
          $this->_example_output($output);   
     }
+
+
+   public function chooseLocation()
+   {
+     //$this->load->database();  
+         //load the model  
+     //$this->load->model('m_login'); 
+
+     $data['h']=$this->m_login->selectLocation();  
+         //return the data in view  
+     $this->load->view('location_view', $data);  
+   }
 
 
     public function location()

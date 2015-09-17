@@ -6,7 +6,7 @@ class M_login extends CI_Model
   {
     parent::__construct();
   }
-  
+
   
   public function ambilPengguna($username, $password, $status, $level)
   {
@@ -20,7 +20,7 @@ class M_login extends CI_Model
     
     return $query->num_rows();
   }
-  
+
   
   public function dataPengguna($username)
   {
@@ -38,7 +38,16 @@ class M_login extends CI_Model
    
    return $query->row();
   }
-  
+
+
+   public function selectLocation()  
+   {  
+         //data is retrive from this query  
+    $query = $this->db->get('location');  
+    return $query;  
+   }  
+
+
   public function add_user()
   {
      $data=array(
