@@ -60,13 +60,44 @@ class Daftar_masuk extends CI_Controller
         }else
         {
          echo " <script>
-		            alert('Gagal Login: Cek username , password dan level anda!');
-		            history.go(-1);
-		          </script>";        
+                alert('Gagal Login: Cek username , password dan level anda!');
+                history.go(-1);
+              </script>";        
         }
       }  
   }
   
+  public function register()
+ {
+  $this->load->view('registration_view');//loads the register_view.php file in views folder
+ }
+  
+  public function registration()
+ {
+  $this->load->library('form_validation');
+  // field name, error message, validation rules
+  $this->form_validation->set_rules('ic_no', 'Ic No', 'trim|required|min_length[5]|xss_clean');
+  $this->form_validation->set_rules('full_name', 'Full Name', 'trim|required|min_length[5]|xss_clean');
+  $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[5]|xss_clean');
+  $this->form_validation->set_rules('contact_num', 'Contact Number', 'trim|required|min_length[5]|xss_clean');
+  $this->form_validation->set_rules('user_name', 'User Name', 'trim|required|min_length[4]|xss_clean');
+  $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|min_length[5]|xss_clean');
+  $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
+  $this->form_validation->set_rules('con_password', 'Password Confirmation', 'trim|required|matches[password]');
+  $this->form_validation->set_rules('gender', 'Gender', 'trim|required|""');
+
+  if($this->form_validation->run() == FALSE)
+  {
+   
+    $this->load->view('registration_view');
+  }
+  else
+  {
+   $this->m_login->add_user();
+   //$this->thank();
+   $this->load->view('success');
+  }
+ }
   
   public function logout()
   {
@@ -80,6 +111,100 @@ class Daftar_masuk extends CI_Controller
         $this->grocery_crud->set_table('user');
         $output = $this->grocery_crud->render();
  
+         $this->_example_output($output);   
+    }
+
+  function admin_generate()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_generate.php');
+  }
+
+  function admin_locate()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_locate.php');
+  }
+
+  function admin_locate()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_locate.php');
+  }
+
+  function admin_locatetype()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_locatetype.php');
+  }
+
+  function admin_manage()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_manage.php');
+  }
+
+  function driver_scan()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_scan.php');
+  }
+
+  function driver_view()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_view.php');
+  }
+
+  function driver_selbus()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_selbus.php');
+  }
+
+
+  function user_view()
+  {
+    $this->load->helper("url");
+    $this->load->view('user_view.php');
+  }
+
+   public function bus()
+   {
+        $this->grocery_crud->set_table('bus');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+    public function busDriver()
+   {
+        $this->grocery_crud->set_table('bus_driver');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+    public function driverLocation()
+   {
+        $this->grocery_crud->set_table('driver_location');
+        $output = $this->grocery_crud->render();
+ 
+        
+
+         $this->_example_output($output);   
+    }
+
+
+    public function location()
+   {
+        $this->grocery_crud->set_table('location');
+        $output = $this->grocery_crud->render();
+ 
         
 
          $this->_example_output($output);   
@@ -90,7 +215,6 @@ class Daftar_masuk extends CI_Controller
     {
         $this->load->view('our_templates.php',$output);    
     }
-
 
 }
 

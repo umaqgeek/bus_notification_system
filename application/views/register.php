@@ -1,95 +1,15 @@
-<<<<<<< HEAD
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>Login/Register</title>
-    <link href="<?php echo base_url('assets/css/normalize.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/fontawesome.min.css'); ?>" rel="stylesheet prefetch">
-  </head>
-  <body>
-    <div class="logmod">
-  <div class="logmod__wrapper">
-    
-    <div class="logmod__container">
-      <ul class="logmod__tabs">
-        <li data-tabtar="lgm-2"><a href="#">Login</a></li>
-        <li data-tabtar="lgm-1"><a href="#">Sign Up</a></li>
-      </ul>
-      <div class="logmod__tab-wrapper">
-      <div class="logmod__tab lgm-1">
-        <div class="logmod__heading">
-          <span class="logmod__heading-subtitle">Enter your personal details <strong>to create an acount</strong></span>
-        </div>
-        <div class="logmod__form">
-          <form accept-charset="utf-8" action="#" class="simform">
-            <div class="sminputs">
-              <div class="input full">
-                <label class="string optional" for="user-name">Username*</label>
-                <input class="string optional" maxlength="255" id="user-email" placeholder="Username" type="email" size="50" />
-              </div>
-            </div>
-            <div class="sminputs">
-              <div class="input string optional">
-                <label class="string optional" for="user-pw">Password *</label>
-                <input class="string optional" maxlength="255" id="user-pw" placeholder="Password" type="text" size="50" />
-              </div>
-              <div class="input string optional">
-                <label class="string optional" for="user-pw-repeat">Repeat password *</label>
-                <input class="string optional" maxlength="255" id="user-pw-repeat" placeholder="Repeat password" type="text" size="50" />
-              </div>
-            </div>
-            <div class="simform__actions">
-              <input class="sumbit" name="commit" type="sumbit" value="Create Account" />
-              <span class="simform__actions-sidetext">By creating an account you agree to our <a class="special" href="#" target="_blank" role="link">Terms & Privacy</a></span>
-            </div> 
-          </form>
-        </div> 
-      </div>
-      <div class="logmod__tab lgm-2">
-        <div class="logmod__heading">
-          <span class="logmod__heading-subtitle">Enter your username and password <strong>to sign in</strong></span>
-        </div> 
-        <div class="logmod__form">
-          <form accept-charset="utf-8" action="#" class="simform">
-            <div class="sminputs">
-              <div class="input full">
-                <label class="string optional" for="user-name">Username*</label>
-                <input class="string optional" maxlength="255" id="user-email" placeholder="Username" type="email" size="50" />
-              </div>
-            </div>
-            <div class="sminputs">
-              <div class="input full">
-                <label class="string optional" for="user-pw">Password *</label>
-                <input class="string optional" maxlength="255" id="user-pw" placeholder="Password" type="password" size="50" />
-                						<span class="hide-password">Show</span>
-              </div>
-            </div>
-            <div class="simform__actions">
-              <input class="sumbit" name="commit" type="sumbit" value="Log In" />
-              <span class="simform__actions-sidetext"><a class="special" role="link" href="#">Forgot your password?<br>Click here</a></span>
-            </div> 
-          </form>
-          </div> 
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
-    <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
-    <script src="<?php echo base_url('assets/js/index.js'); ?>"></script>
-  </body>
-=======
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Free Bootstrap Admin Template : Binary Admin</title>
-	<!-- BOOTSTRAP STYLES-->
+    <title>BuNS | Driver Page </title>
+    <!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url().'asset/css/bootstrap.css'; ?>" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
     <link href="<?php echo base_url().'asset/css/font-awesome.css'; ?>" rel="stylesheet" />
+     <!-- MORRIS CHART STYLES-->
+    <link href="<?php echo base_url().'asset/js/morris/morris-0.4.3.min.css'; ?>" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
     <link href="<?php echo base_url().'asset/css/custom.css'; ?>" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
@@ -105,7 +25,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Binary admin</a> 
+                <a class="navbar-brand" href="index.html">Driver Profile</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -116,32 +36,32 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
-                    <img src="<?php echo base_url().'asset/img/find_user.png'; ?>" class="user-image img-responsive"/>
-					</li>
-				
-					
+                <li class="text-center">
+                    <img src="<?php echo base_url().'asset/img/find_user.png'?>" class="user-image img-responsive"/>
+                    </li>
+                
+                    
                     <li>
-                        <a  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
                     </li>
-                      <li>
-                        <a  href="ui.html"><i class="fa fa-qrcode fa-3x"></i> UI Elements</a>
+                     <li>
+                        <a  href="ui.html"><i class="fa fa-qrcode fa-3x"></i>Scan QR Code</a>
                     </li>
                     <li>
-                        <a  href="tab-panel.html"><i class="fa fa-map-marker fa-3x"></i> Tabs & Panels</a>
+                        <a  href="tab-panel.html"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
                     </li>
-						   <li  >
-                        <a  href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Morris Charts</a>
-                    </li>	
+                           <!--<li  >
+                        <a   href="chart.html"><i class="fa fa-bar-chart-o fa-3x"></i> Morris Charts</a>
+                    </li>   
                       <li  >
                         <a  href="table.html"><i class="fa fa-table fa-3x"></i> Table Examples</a>
                     </li>
                     <li  >
-                        <a class="active-menu"  href="form.html"><i class="fa fa-edit fa-3x"></i> Forms </a>
-                    </li>				
-					
-					                   
-                    <li>
+                        <a  href="form.html"><i class="fa fa-edit fa-3x"></i> Forms </a>
+                    </li>           --> 
+                    
+                                       
+                   <!-- <li>
                         <a href="#"><i class="fa fa-sitemap fa-3x"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
@@ -169,8 +89,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                         </ul>
                       </li>  
                   <li  >
-                        <a   href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
-                    </li>	
+                        <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
+                    </li>-->    
                 </ul>
                
             </div>
@@ -181,255 +101,418 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Forms Page</h2>   
-                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                     <h2>Driver Dashboard</h2>   
+                        <h5>Welcome Amarule , Love to see you back. </h5>
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                  <hr />
+                <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6">           
+            <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-red set-icon">
+                    <i class="fa fa-envelope-o"></i>
+                </span>
+                <div class="text-box" >
+                    <p class="main-text">120 New</p>
+                    <p class="text-muted">Messages</p>
+                </div>
+             </div>
+             </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">           
+            <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-green set-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+                <div class="text-box" >
+                    <p class="main-text">30 Tasks</p>
+                    <p class="text-muted">Remaining</p>
+                </div>
+             </div>
+             </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">           
+            <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-blue set-icon">
+                    <i class="fa fa-bell-o"></i>
+                </span>
+                <div class="text-box" >
+                    <p class="main-text">240 New</p>
+                    <p class="text-muted">Notifications</p>
+                </div>
+             </div>
+             </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">           
+            <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-rocket"></i>
+                </span>
+                <div class="text-box" >
+                    <p class="main-text">3 Orders</p>
+                    <p class="text-muted">Pending</p>
+                </div>
+             </div>
+             </div>
+            </div>
+                 <!-- /. ROW  -->
+                <hr />                
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">           
+            <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-blue">
+                    <i class="fa fa-warning"></i>
+                </span>
+                <div class="text-box" >
+                    <p class="main-text">52 Important Issues to Fix </p>
+                    <p class="text-muted">Please fix these issues to work smooth</p>
+                    <p class="text-muted">Time Left: 30 mins</p>
+                    <hr />
+                    <p class="text-muted">
+                          <span class="text-muted color-bottom-txt"><i class="fa fa-edit"></i>
+                               Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn. 
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn. 
+                               </span>
+                    </p>
+                </div>
+             </div>
+             </div>
+                    
+                    
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel back-dash">
+                               <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; SPEED</strong>
+                             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing sit ametsit amet elit ftr. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                        </div>
                        
                     </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12 ">
+                        <div class="panel ">
+          <div class="main-temp-back">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-6"> <i class="fa fa-cloud fa-3x"></i> Newyork City </div>
+                <div class="col-xs-6">
+                  <div class="text-temp"> 10° </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+                     <div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-green set-icon">
+                    <i class="fa fa-desktop"></i>
+                </span>
+                <div class="text-box" >
+                    <p class="main-text">Display</p>
+                    <p class="text-muted">Looking Good</p>
+                </div>
+             </div>
+            
+    </div>
+                        
+        </div>
                  <!-- /. ROW  -->
-                 <hr />
-               <div class="row">
-                <div class="col-md-12">
-                    <!-- Form Elements -->
+                <div class="row"> 
+                    
+                      
+                               <div class="col-md-9 col-sm-12 col-xs-12">                     
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Registration Form
+                            Bar Chart Example
                         </div>
                         <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <h3>Basic Form Examples</h3>
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label>Text Input</label>
-                                            <input class="form-control" />
-                                            <p class="help-block">Help text here.</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Text Input with Placeholder</label>
-                                            <input class="form-control" placeholder="PLease Enter Keyword" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Just A Label Control</label>
-                                            <p class="form-control-static">info@yourdomain.com</p>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>File input</label>
-                                            <input type="file" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Text area</label>
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Checkboxes</label>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value="" />Checkbox Example One
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value=""/>Checkbox Example Two
-                                                </label>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" value=""/>Checkbox Example Three
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Inline Checkboxes Examples</label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox"/> One
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox"/> Two
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox"/> Three
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Radio Button Examples</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />Radio Example One
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"/>Radio Example Two
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"/>Radio Example Three
-                                                </label>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label>Select Example</label>
-                                            <select class="form-control">
-                                                <option>One Vale</option>
-                                                <option>Two Vale</option>
-                                                <option>Three Vale</option>
-                                                <option>Four Vale</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Multiple Select Example</label>
-                                            <select multiple class="form-control">
-                                                <option>One Vale</option>
-                                                <option>Two Vale</option>
-                                                <option>Three Vale</option>
-                                                <option>Four Vale</option>
-                                            </select>
-                                        </div>
-                                        <button type="submit" class="btn btn-default">Submit Button</button>
-                                        <button type="reset" class="btn btn-primary">Reset Button</button>
+                            <div id="morris-bar-chart"></div>
+                        </div>
+                    </div>            
+                </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">                       
+                    <div class="panel panel-primary text-center no-boder bg-color-green">
+                        <div class="panel-body">
+                            <i class="fa fa-bar-chart-o fa-5x"></i>
+                            <h3>120 GB </h3>
+                        </div>
+                        <div class="panel-footer back-footer-green">
+                           Disk Space Available
+                            
+                        </div>
+                    </div>
+                    <div class="panel panel-primary text-center no-boder bg-color-red">
+                        <div class="panel-body">
+                            <i class="fa fa-edit fa-5x"></i>
+                            <h3>20,000 </h3>
+                        </div>
+                        <div class="panel-footer back-footer-red">
+                            Articles Pending
+                            
+                        </div>
+                    </div>                         
+                        </div>
+                
+           </div>
+                 <!-- /. ROW  -->
+                <div class="row" >
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+  <div class="panel panel-primary text-center no-boder bg-color-green">
+                        <div class="panel-body">
+                            <i class="fa fa-comments-o fa-5x"></i>
+                            <h4>200 New Comments </h4>
+                             <h4>See All Comments  </h4>
+                        </div>
+                        <div class="panel-footer back-footer-green">
+                             <i class="fa fa-rocket fa-5x"></i>
+                            Lorem ipsum dolor sit amet sit sit, consectetur adipiscing elitsit sit gthn ipsum dolor sit amet ipsum dolor sit amet
+                            
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+               
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                           Responsive Table Example
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                             <th>User No.</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>100090</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>100090</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>100090</td>
+                                        </tr>
+                                         <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>100090</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>100090</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>100090</td>
+                                        </tr>
 
-                                    </form>
-                                    <br />
-                                      <h3>With radio & checkboxes</h3>
-                                    <form>
-
-    <div class="form-group input-group">
-      <span class="input-group-addon">
-        <input type="checkbox" />
-      </span>
-      <input type="text" class="form-control" />
-    </div>
-                                         <div class="form-group input-group">
-      <span class="input-group-addon">
-        <input type="radio" />
-      </span>
-      <input type="text" class="form-control" />
-    </div>
-                                    </form>
-
-                                 
-    </div>
-                                
-                                <div class="col-md-6">
-                                    <h3>Disabled Form State Examples</h3>
-                                    <form role="form">
-                                        <fieldset disabled="disabled">
-                                            <div class="form-group">
-                                                <label for="disabledSelect">Disabled input</label>
-                                                <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input" disabled />
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="disabledSelect">Disabled select </label>
-                                                <select id="disabledSelect" class="form-control">
-                                                    <option>Disabled select</option>
-                                                </select>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox" />Disabled Checkbox
-                                                </label>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Disabled Button</button>
-                                        </fieldset>
-                                    </form>
-                                    <h3>Validation State Examples</h3>
-                                    <form role="form">
-                                        <div class="form-group has-success">
-                                            <label class="control-label" for="inputSuccess">Input with success</label>
-                                            <input type="text" class="form-control" id="inputSuccess">
-                                        </div>
-                                        <div class="form-group has-warning">
-                                            <label class="control-label" for="inputWarning">Input with warning</label>
-                                            <input type="text" class="form-control" id="inputWarning">
-                                        </div>
-                                        <div class="form-group has-error">
-                                            <label class="control-label" for="inputError">Input with error</label>
-                                            <input type="text" class="form-control" id="inputError">
-                                        </div>
-                                    </form>
-                                    <h3>Input Group Examples</h3>
-                                    <form role="form">
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">@</span>
-                                            <input type="text" class="form-control" placeholder="Username">
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-eur"></i>
-                                            </span>
-                                            <input type="text" class="form-control" placeholder="Font Awesome Icon">
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">$</span>
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-addon">.00</span>
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button"><i class="fa fa-search"></i>
-                                                </button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                    <h3>Different Size Input Groups</h3>
-                                     <form role="form">
-  <div class=" form-group input-group input-group-lg">
-  <span class="input-group-addon">@</span>
-  <input type="text" class="form-control" placeholder="Username" />
-</div>
-
-<div class="form-group input-group">
-  <span class="input-group-addon">@</span>
-  <input type="text" class="form-control" placeholder="Username" />
-</div>
-
-<div class="form-group input-group input-group-sm">
-  <span class="input-group-addon">@</span>
-  <input type="text" class="form-control" placeholder="Username" />
-</div>
-                                         
-                                     </form>
-                                    <h3>Different Size Input Groups</h3>
-                                     <form role="form">
-                                  <div class="input-group">
-      <span class="form-group input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-      <input type="text" class="form-control" />
-    </div>
-<br />
-                                           <div class="input-group">
-     
-      <input type="text" class="form-control" />
-                                                <span class="form-group input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-    </div>
-                                         </form>
-                                </div>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                     <!-- End Form Elements -->
-                </div>
-            </div>
-                <!-- /. ROW  -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3>More Customization</h3>
-                         <p>
-                        For more customization for this template or its components please visit official bootstrap website i.e getbootstrap.com or <a href="http://getbootstrap.com/components/" target="_blank">click here</a> . We hope you will enjoy our template. This template is easy to use, light weight and made with love by binarycart.com 
-                        </p>
+                    
                     </div>
                 </div>
-                <!-- /. ROW  -->
+                 <!-- /. ROW  -->
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                   
+                    <div class="chat-panel panel panel-default chat-boder chat-panel-head" >
+                        <div class="panel-heading">
+                            <i class="fa fa-comments fa-fw"></i>
+                            Chat Box
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu slidedown">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-refresh fa-fw"></i>Refresh
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-check-circle fa-fw"></i>Available
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-times fa-fw"></i>Busy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-clock-o fa-fw"></i>Away
+                                        </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-sign-out fa-fw"></i>Sign Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul class="chat-box">
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="<?php echo base_url().'asset/img/1.png'; ?>" alt="User" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body">                                        
+                                            <strong >Jack Sparrow</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i>12 mins ago
+                                            </small>                                      
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+
+                                        <img src="<?php echo base_url().'asset/img/2.png'; ?>" alt="User" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i>13 mins ago</small>
+                                            <strong class="pull-right">Jhonson Deed</strong>
+                                      
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                         <img src="<?php echo base_url().'asset/img/3.png'; ?>" alt="User" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        
+                                            <strong >Jack Sparrow</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i>14 mins ago</small>
+                                        
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                         <img src="<?php echo base_url().'asset/img/4.png'; ?>" alt="User" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                      
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i>15 mins ago</small>
+                                            <strong class="pull-right">Jhonson Deed</strong>
+                                       
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                    <li class="left clearfix">
+                                    <span class="chat-img pull-left">
+                                        <img src="<?php echo base_url().'asset/img/1.png'; ?>" alt="User" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body">                                        
+                                            <strong >Jack Sparrow</strong>
+                                            <small class="pull-right text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i>12 mins ago
+                                            </small>                                      
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="right clearfix">
+                                    <span class="chat-img pull-right">
+                                       <img src="<?php echo base_url().'asset/img/2.png'; ?>" alt="User" class="img-circle" />
+                                    </span>
+                                    <div class="chat-body clearfix">
+                                        
+                                            <small class=" text-muted">
+                                                <i class="fa fa-clock-o fa-fw"></i>13 mins ago</small>
+                                            <strong class="pull-right">Jhonson Deed</strong>
+                                      
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message to send..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                         <div class="panel panel-default">
+                        <div class="panel-heading">
+                           Label Examples
+                        </div>
+                        <div class="panel-body">
+                            <span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span>
+                        </div>
+                    </div>
+                         
+                         <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Donut Chart Example
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"></div>
+                        </div>
+                    </div>
+                      
+                    </div>
+                </div>     
+                 <!-- /. ROW  -->           
     </div>
              <!-- /. PAGE INNER  -->
             </div>
@@ -443,10 +526,12 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
     <script src="<?php echo base_url().'asset/js/bootstrap.min.js'; ?>"></script>
     <!-- METISMENU SCRIPTS -->
     <script src="<?php echo base_url().'asset/js/jquery.metisMenu.js'; ?>"></script>
+     <!-- MORRIS CHART SCRIPTS -->
+     <script src="<?php echo base_url().'asset/js/morris/raphael-2.1.0.min.js'; ?>"></script>
+    <script src="<?php echo base_url().'asset/js/morris/morris.js'; ?>"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="<?php echo base_url().'asset/js/custom.js'; ?>"></script>
     
    
 </body>
->>>>>>> origin/solehin
 </html>

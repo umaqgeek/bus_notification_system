@@ -248,6 +248,7 @@ class Examples extends CI_Controller {
 		}
 	}
 
+
 	public function user()
     {
         $this->grocery_crud->set_table('user');
