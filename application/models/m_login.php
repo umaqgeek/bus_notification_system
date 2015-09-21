@@ -52,8 +52,8 @@ class M_login extends CI_Model
                  'username'=>$this->input->post('user_name'),
                  'email'=>$this->input->post('email_address'),
                  'password'=>md5($this->input->post('password')),
-         'level'=>$this->input->post('3'),
-         'status'=>$this->input->post('1')
+                  'level'=>"3",
+                  'status'=>"1"
                  );
      $this->db->insert('user',$data);
      return true;

@@ -14,20 +14,20 @@
          </header>
          <h2>Bus Notification System</h2>
          <hr/>
-         <label>Full Name :</label>
-         <input type="text" name="full_name" id="full_name" placeholder="Full Name" value="<?php echo set_value('full_name'); ?>"/><br /><br />
+         <strong><label>Full Name :</label>
+         <input type="text" name="full_name" id="full_name" placeholder="Full Name" value="<?php echo set_value('full_name'); ?>" required/><br /><br />
          <label>Address :</label><br />
-         <textarea rows="4" cols="42" id="address" name="address" placeholder="Address" value="<?php echo set_value('address'); ?>" />
+         <textarea rows="4" cols="46" id="address" name="address" placeholder="Address" value="<?php echo set_value('address'); ?>" required/>
          </textarea><br /><br />
          <label>IC Number:</label><br />
-         <input type="text" id="ic_no" name="ic_no" placeholder="870501086561" value="<?php echo set_value('ic_no'); ?>" /><br /><br />
+         <input type="text" id="ic_no" name="ic_no" placeholder="870501086561" value="<?php echo set_value('ic_no'); ?>" required/><br /><br />
          <label>Contact Number:</label><br />
-         <input type="text" id="contact_num" name="contact_num" placeholder="0123456789" value="<?php echo set_value('contact_num'); ?>" /><br /><br />
+         <input type="text" id="contact_num" name="contact_num" placeholder="0123456789" value="<?php echo set_value('contact_num'); ?>" required/><br /><br />
          <label>Email Address:</label>
-         <input type="text" id="email_address" name="email_address" placeholder="contoh@email.com" value="<?php echo set_value('email_address'); ?>" /><br /><br />
+         <input type="text" id="email_address" name="email_address" placeholder="contoh@email.com" value="<?php echo set_value('email_address'); ?>" required/><br /><br />
          <td>Gender : </td>
          <input type="radio" name="gender" value="male" <?php echo set_radio('gender', 'male'); ?>/>Male
-         <input type="radio" name="gender" value="female" <?php echo set_radio('gender', 'female'); ?>/>Female
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="female" <?php echo set_radio('gender', 'female'); ?>/>Female
          <tr><br /><br />
          <td>Race</td>
          <td>:</td>
@@ -37,7 +37,7 @@
          <option value="3">India</option>
          <option value="4">Lain-Lain</option>
          </select></td>
-         </tr><br /><br />
+         </tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <tr>
         <td>Religion</td>
         <td>:</td>
@@ -50,12 +50,12 @@
         </select></td>
         </tr><br /><br />
         <label>Username:</label>
-        <input type="text" id="user_name" name="user_name" placeholder="Username"value="<?php echo set_value('user_name'); ?>" /><br/><br />
+        <input type="text" id="user_name" name="user_name" placeholder="Username"value="<?php echo set_value('user_name'); ?>" required/><br/><br />
         <label>Password :</label>
-        <input type="password" name="password" id="password" placeholder="**********" value="<?php echo set_value('password'); ?>"/><br/><br />
+        <input type="password" name="password" id="password" placeholder="**********" value="<?php echo set_value('password'); ?>" required/><br/><br />
         <label>Confirm Password:</label>
-        <input type="password" id="con_password" name="con_password" placeholder="**********" value="<?php echo set_value('con_password'); ?>" />
-        <br/><br/>
+        <input type="password" id="con_password" name="con_password" placeholder="**********" value="<?php echo set_value('con_password'); ?>" required />
+        <br/><br/></strong>
        <input type="submit" value=" Register " name="register"/><br />
        Already have an account. <?php echo anchor('daftar_masuk/login_form', 'Login Here');?>
  </div>

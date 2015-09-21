@@ -16,9 +16,9 @@
          <h2>Bus Notification System</h2>
          <hr/>
          <label>Username :</label>
-         <input type="text" name="username" id="username" placeholder="Username" value="<?php echo set_value('username'); ?>"/><br /><br />
+         <input type="text" name="username" id="username" placeholder="Username" value="<?php echo set_value('username'); ?>" required /><br /><br />
      <label>Password :</label>
-         <input type="password" name="password" id="password" placeholder="**********"/><br/><br />
+         <input type="password" name="password" id="password" placeholder="**********" required /><br/><br />
           <tr>
         <td>Level</td>
         <td>:</td>
