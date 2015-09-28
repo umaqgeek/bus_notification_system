@@ -1,5 +1,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<head>  
+<style>
+table {
+    width:50%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th  {
+    background-color: black;
+    color: white;
+}
+</style>
+</head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuNS | Generate QR Code </title>
@@ -24,7 +48,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin Page</a> 
+                <a class="navbar-brand" href="index.html">Driver Page</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -32,12 +56,14 @@ float: right;
 font-size: 16px;"> Last access : 31 May 2014 &nbsp; <a href="<?php echo site_url ('daftar_masuk/logout', 'Keluar &raquo;');?>" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
            <!-- /. NAV TOP  -->
+
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				            <li class="text-center">
                     <img src="<?php echo base_url().'asset/img/find_user.png'?>" class="user-image img-responsive"/>
 					         </li>
+
                     <li>
                         <a href="<?php echo site_url ('daftar_masuk/index');?>"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
                     </li>
@@ -45,19 +71,42 @@ font-size: 16px;"> Last access : 31 May 2014 &nbsp; <a href="<?php echo site_url
                         <a class="active-menu" href="<?php echo site_url ('daftar_masuk/driver_bus');?>"><i class="fa fa-male fa-3x"></i>Select Bus</a>
                     </li>
                     <li>
-                        <a href="<?php echo site_url ('daftar_masuk/driver_maps');?>"><i class="fa fa-map-marker fa-3x"></i>View Maps</a>
+                        <a href="<?php echo site_url ('map');?>"><i class="fa fa-map-marker fa-3x"></i>View Maps</a>
                     </li> 
                 </ul>
             </div>
         </nav>  
+
+
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
                      <h2>Select Bus</h2>   
-                    </div>
-                </div>              
+                </div>
+            </div>         
+                <body>
+                 <table id="t01">
+                  <tbody>  
+                   <tr>  
+                     <td>Bus Plate No</td>  
+                     <td>Action</td>              
+                   </tr>  
+                  <?php 
+                   foreach ($i->result() as $row)  
+                   {  
+                  ?>
+                  <tr>  
+                  <td><?php echo $row->bus_plate_no;?></td>
+                  <td><a href="">choose</td>
+                  </tr>  
+               <?php }  
+              ?>  
+           </tbody>  
+       </table>  
+      <body>  
+     </body>       
                  <!-- /. ROW  -->
 				 <hr />
                   <!--<center><img src="<?php echo base_url().'asset/img/buns_map.jpg'?>" width="1000" height="660" alt=""/></center>
@@ -67,6 +116,9 @@ font-size: 16px;"> Last access : 31 May 2014 &nbsp; <a href="<?php echo site_url
             </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
+      
+     
+
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->

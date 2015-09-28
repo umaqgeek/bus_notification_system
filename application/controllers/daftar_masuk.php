@@ -102,12 +102,13 @@ class Daftar_masuk extends CI_Controller
  }
 
   
-   public function choose_bus()
+    public function choose_bus()
    {
-      if($this->form_validation->run()==FALSE)
-      {
-        $this->load->view('bus_choose');
-      }
+      
+         $data['i']=$this->m_login->selectBus();  
+         //return the data in view  
+         $this->load->view('bus_choose', $data);  
+     
    }
   
 
@@ -129,12 +130,7 @@ class Daftar_masuk extends CI_Controller
          $this->_example_output($output);   
     }
 
-<<<<<<< HEAD
-
-  function driverDashboard()
-=======
   function user_view()
->>>>>>> origin/amarul
   {
     $this->load->helper("url");
     $this->load->view('user_view.php');
@@ -229,8 +225,10 @@ class Daftar_masuk extends CI_Controller
   
   function driver_bus()
   {
-    $this->load->helper("url");
-    $this->load->view('driver_bus.php');
+    //$this->load->helper("url");
+   $data['i']=$this->m_login->selectBus();  
+         //return the data in view  
+   $this->load->view('driver_bus', $data);  
   }
   
   function driver_scan()
@@ -241,7 +239,7 @@ class Daftar_masuk extends CI_Controller
   
   function driver_maps()
   {
-    $this->load->helper("url");
+    //$this->load->CI_Controller("map");
     $this->load->view('driver_maps.php');
   }
 

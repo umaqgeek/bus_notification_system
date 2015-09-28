@@ -24,7 +24,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin Page</a> 
+                <a class="navbar-brand" href="index.html">Driver Page</a> 
             </div>
   <div style="color: white;
 padding: 15px 50px 5px 50px;
@@ -45,7 +45,7 @@ font-size: 16px;"> Last access : 31 May 2014 &nbsp; <a href="<?php echo site_url
                         <a href="<?php echo site_url ('daftar_masuk/driver_bus');?>"><i class="fa fa-male fa-3x"></i>Select Bus</a>
                     </li>
                     <li>
-                        <a class="active-menu" href="<?php echo site_url ('daftar_masuk/driver_maps');?>"><i class="fa fa-map-marker fa-3x"></i>View Maps</a>
+                        <a class="active-menu" href="<?php echo site_url ('map');?>"><i class="fa fa-map-marker fa-3x"></i>View Maps</a>
                     </li> 
                 </ul>
             </div>

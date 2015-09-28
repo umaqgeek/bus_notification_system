@@ -44,24 +44,17 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
           </li>
         
                     <li>
-<<<<<<< HEAD
-                        <a class="active-menu"  href="daftar_masuk"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
-=======
-                        <a class="active-menu" href="<?php echo site_url ('daftar_masuk/index');?>"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
->>>>>>> origin/amarul
+                        <a class="active-menu"  href="daftar_masuk"><i class="fa fa-dashboard fa-3x"></i> Profile</a>            
                     </li>
                      <li>
-                        <a href="<?php echo site_url ('daftar_masuk/admin_generate');?>"><i class="fa fa-qrcode fa-3x"></i>Generate QR Code</a>
+                        <a href="<?php echo site_url ('qr_code_generate');?>"><i class="fa fa-qrcode fa-3x"></i>Generate QR Code</a>
                     </li>
                     <li>
-<<<<<<< HEAD
-                        <a  href="tab-panel.html"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
+                       <a href="<?php echo site_url ('map');?>"><i class="fa fa-qrcode fa-3x"></i>View Map</a>
                     </li>  
                      <li>
-                        <a  href="daftar_masuk/user"><i class="fa fa-map-marker fa-3x"></i>Grocery Crud</a>
+                        <a href="daftar_masuk/user"><i class="fa fa-map-marker fa-3x"></i>Grocery Crud</a>
                     </li>   
-
-=======
                         <a href="<?php echo site_url ('daftar_masuk/admin_locate');?>"><i class="fa fa-location-arrow fa-3x"></i>Manage Location</a>
                     </li>
                     <li>
@@ -70,7 +63,6 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     <li>
                         <a href="<?php echo site_url ('daftar_masuk/admin_manage');?>"><i class="fa fa-users fa-3x"></i>Manage User</a>
                     </li>  
->>>>>>> origin/amarul
                 </ul>
                
             </div>
@@ -85,14 +77,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </div>
                 </div>              
                  <!-- /. ROW  -->
-<<<<<<< HEAD
-                 
-               
- 
-=======
                 <hr />                
                 <div class="row">
->>>>>>> origin/amarul
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="panel back-dash">
                                <i class="fa fa-dashboard fa-3x"></i><strong> &nbsp; Full Name</strong>
@@ -257,26 +243,14 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
           </li>
         
                     <li>
-<<<<<<< HEAD
                         <a class="active-menu"  href="daftar_masuk"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
                     </li>
-                     <li>
-                        <a  href="qr_code_generate"><i class="fa fa-qrcode fa-3x"></i>Scan QR Code</a>
-                    </li>
-                     <li>
-                        <a  href="daftar_masuk/choose_bus"><i class="fa fa-qrcode fa-3x"></i>Choose Bus</a>
-                    </li>
                     <li>
-                        <a  href="map"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
-=======
-                        <a class="active-menu"  href="<?php echo site_url ('daftar_masuk/index');?>"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
-                    </li>
                      <li>
                         <a  href="<?php echo site_url ('daftar_masuk/driver_bus');?>"><i class="fa fa-male fa-3x"></i>Select Bus</a>
                     </li>
                     <li>
-                        <a  href="<?php echo site_url ('daftar_masuk/driver_maps');?>"><i class="fa fa-map-marker fa-3x"></i>View Maps</a>
->>>>>>> origin/amarul
+                        <a  href="map"><i class="fa fa-map-marker fa-3x"></i>View Maps</a>
                     </li>   
                 </ul>
                
@@ -788,13 +762,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="<?php echo site_url
                     </li>
                     <li>
                         <a  href="map"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
-=======
-                        <a class="active-menu"  href="<?php echo site_url ('daftar_masuk/index');?>"><i class="fa fa-dashboard fa-3x"></i> Profile</a>
-                    </li>
-                    <li>
-                        <a  href="<?php echo site_url ('daftar_masuk/user_view');?>"><i class="fa fa-map-marker fa-3x"></i>View Map</a>
->>>>>>> origin/amarul
-                    </li>     
+                    </li>    
                      <li>
                         <a  href="daftar_masuk/chooseLocation"><i class="fa fa-map-marker fa-3x"></i>View Schedule</a>
                     </li>    
