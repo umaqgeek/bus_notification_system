@@ -110,10 +110,7 @@ class Daftar_masuk extends CI_Controller
    {
         $this->grocery_crud->set_table('user');
         $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
+        $this->_example_output($output);   
     }
 
   function user_view()

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
+	<?php 
+	foreach($css_files as $file): ?>
+    <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+	<?php endforeach; ?>
+	<?php foreach($js_files as $file): ?>
+ 
+    <script src="<?php echo $file; ?>"></script>
+	<?php endforeach; ?>
         <meta charset="utf-8">
         <link rel="shortcut icon" href="<?php echo base_url().'images/buns.png'?>">
         <title>BuNS - Bus Notification System</title>
@@ -72,12 +80,12 @@
                                                         else if($pengguna->level == 2)
                                                         {
                                                         echo "Bus Driver";
-														}
-														else if($pengguna->level == 3)
+                                                        }
+                                                        else if($pengguna->level == 3)
                                                         {
                                                         echo "Passenger";
-														}
-														?></p>-->
+                                                        }
+                                                        ?></p>-->
                         </div>
                     </div>
                     <!--- Divider -->
@@ -100,7 +108,7 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_manage');?>" class="waves-effect"><i class="md md-perm-identity"></i><span>Manage User </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/user');?>" class="waves-effect"><i class="md md-perm-identity"></i><span>Manage User </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -116,75 +124,16 @@
             <!-- Start right Content here -->
             <!-- ============================================================== -->                      
             <div class="content-page">
-			<div class="content">
                 <div class="content">
-                    
-                <div class="row">
-                            <div class="col-md-12">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Generate QR Code</h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class="row">
-                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <div class="table-responsive">
-                                                    <table class="table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Location</th>
-																<th>Type</th>
-																<th>Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Bus Stop FTMK</td>
-														<td>Main Campus</td>
-														<td><button class="btn btn-info btn-sm btn-round" type="submit" >
-															<i class="ace-icon fa fa-check"></i>
-															 Generate QR Code
-															</button>
-															</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Bus Stop PPP</td>
-																<td>Main Campus</td>
-																<td><button class="btn btn-info btn-sm btn-round" type="submit">
-																	<i class="ace-icon fa fa-check"></i>
-																	 Generate QR Code
-																	</button>
-																	</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Bus Stop PPS</td>
-																<td>Main Campus</td>
-																 <td><button class="btn btn-info btn-sm btn-round" type="submit">
-																	<i class="ace-icon fa fa-check"></i>
-																	 Generate QR Code
-																	</button>
-																	</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Bus Stop depan Ocean</td>
-																<td>City Campus</td>
-																<td><button class="btn btn-info btn-sm btn-round" type="submit">
-																	<i class="ace-icon fa fa-check"></i>
-																	 Generate QR Code
-																	</button><br><br>
-																	</td>
-                                                            </tr> 
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-		</div>
-                </div> 
+                <a href='<?php echo site_url('daftar_masuk/bus')?>'>Bus</a> |
+                <a href='<?php echo site_url('daftar_masuk/busDriver')?>'>Bus Driver</a> |
+                <a href='<?php echo site_url('daftar_masuk/driverLocation')?>'>Driver Location</a> |
+                <a href='<?php echo site_url('daftar_masuk/location')?>'>location </a> |
+                <a href='<?php echo site_url('daftar_masuk/user')?>'>User</a> |         
+                <a href='daftar_masuk'>Back</a> 
+            </div>
+			<?php echo $output; ?>
+            </div> 
 
                 <footer class="footer text-right">
                     2015 © BuNS.
@@ -213,6 +162,6 @@
 
         <!-- CUSTOM JS -->
         <script src="js/jquery.app.js"></script>
-	
-	</body>
+    
+    </body>
 </html>

@@ -40,50 +40,37 @@
                 <div class="panel-body">
                 
                     <div class="form-group">
-                        <div class="col-xs-12">
                             <label>Full Name</label>
                             <input class="form-control input-lg" type="text" name="full_name" id="full_name" placeholder="Full Name" value="<?php echo set_value('full_name'); ?>" required/>
-                        <br /></div>
                     </div>
                     
-                    <div class="form-group ">
-                        <div class="col-xs-12">
+                    <div class="form-group "> 
                             <label>Address</label>
                             <textarea rows="4" cols="42" class="form-control input-lg" id="address" name="address" placeholder="Address" value="<?php echo set_value('address'); ?>" required/></textarea>
-                        <br /></div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
                             <label>IC Number</label>
                             <input class="form-control input-lg" type="text" id="ic_no" name="ic_no" placeholder="870501086561" value="<?php echo set_value('ic_no'); ?>" required/>
-                        <br /></div>
                     </div>
                     
                     <div class="form-group">
-                        <div class="col-xs-12">
                             <label>Contact Number</label>
                             <input class="form-control input-lg" type="text" id="contact_num" name="contact_num" placeholder="0123456789" value="<?php echo set_value('contact_num'); ?>" required/>
-                        <br /></div>
                     </div>
                     
                     <div class="form-group">
-                        <div class="col-xs-12">
                             <label>Email Address</label>
                             <input class="form-control input-lg" type="text" id="email_address" name="email_address" placeholder="contoh@email.com" value="<?php echo set_value('email_address'); ?>" required/>
-                        <br /></div>
                     </div>
                     
                     <div class="form-group">
-                        <div class="col-xs-12">
                             <label>Gender&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type="radio" name="gender" value="gender" <?php echo set_radio('gender', 'male'); ?>/>Male
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="gender" <?php echo set_radio('gender', 'female'); ?>/>Female
-                        <br /><br /></div>
+                            <input type="radio" name="gender" value="gender" <?php echo set_radio('gender', '0'); ?>/>Male
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="gender" <?php echo set_radio('gender', '1'); ?>/>Female
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
                             <tr>
                             <td><label>Race</label></td>
                              <td><select name="race" >
@@ -103,36 +90,26 @@
                             <option value="4">Kristian</option>
                             <option value="5">Lain-Lain</option>
                             </select></td>
-                            </tr><br />
-                        <br /></div>
+                            </tr>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
                             <label>Username</label>
                             <input class="form-control input-lg" type="text" id="user_name" name="user_name" placeholder="Username"value="<?php echo set_value('user_name'); ?>" required/>
-                        <br /></div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
                             <label>Password</label>
                             <input class="form-control input-lg" type="password" name="password" id="password" placeholder="**********" value="<?php echo set_value('password'); ?>" required/>
-                        <br /></div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-xs-12">
                             <label>Confirm Password</label>
                             <input class="form-control input-lg" type="password" id="con_password" name="con_password" placeholder="**********" value="<?php echo set_value('con_password'); ?>" required />
-                        <br /></div>
                     </div>
                     
                     <div class="form-group text-center m-t-40">
-                        <div class="col-xs-12">
                             <button class="btn btn-primary waves-effect waves-light btn-lg w-lg" type="submit" value=" Register " name="register">Register</button>
-                            <br /><br />
-                        </div>
                     </div>
 
 

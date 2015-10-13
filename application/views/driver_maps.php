@@ -62,10 +62,10 @@
                         </div>
                         <div class="user-info">
                             <div class="dropdown">
-                                <a><?php echo $pengguna->username;?></a>
+                                <a><!--<?php echo $pengguna->username;?></a>-->
                             </div>
                             
-                            <p class="text-muted m-0"><?php if($pengguna->level == 1)
+                            <p class="text-muted m-0"><!--<?php if($pengguna->level == 1)
                                                         {
                                                         echo "Administrator";
                                                         }
@@ -77,7 +77,7 @@
                                                         {
                                                         echo "Passenger";
                                                         }
-                                                        ?></p>
+                                                        ?></p> -->
                         </div>
                     </div>
                     <!--- Divider -->
@@ -88,11 +88,11 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/driver_bus');?>" class="waves-effect"><i class="md md-event"></i><span>Select Bus </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/driver_bus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/driver_maps');?>" class="waves-effect"><i class="md md-palette"></i><span>View Maps </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/driver_maps');?>" class="waves-effect"><i class="md md-public"></i><span>View Maps </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -109,199 +109,8 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
                 <!-- Start content -->
-                <div class="content">
-                    
-                
-
-                <div class="wraper container-fluid">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="bg-picture text-center" style="background-image:url('<?php echo base_url().'images/big/bg.jpg'?>')">
-                                <div class="bg-picture-overlay"></div>
-                                <div class="profile-info-name">
-                                    <img src="<?php echo base_url().'images/avatar-2.jpg'?>" class="thumb-lg img-circle img-thumbnail" alt="profile-image">
-                                    <h3 class="text-white"><?php echo $pengguna->full_name;?></h3>
-                                    <h4 class="text-white"><?php echo $pengguna->address?></h4>
-                                </div>
-                            </div>
-                            <!--/ meta -->
-                        </div>
-                    </div>
-                    <div class="row user-tabs">
-                        <div class="col-lg-6 col-md-9 col-sm-9">
-                            <ul class="nav nav-tabs tabs">
-                            <li class="active tab">
-                                <a href="#home-2" data-toggle="tab" aria-expanded="false" class="active"> 
-                                    <span class="visible-xs"><i class="fa fa-home"></i></span> 
-                                    <span class="hidden-xs">About Me</span> 
-                                </a> 
-                            </li> 
-                            <li class="tab"> 
-                                <a href="#profile-2" data-toggle="tab" aria-expanded="false"> 
-                                    <span class="visible-xs"><i class="fa fa-user"></i></span> 
-                                    <span class="hidden-xs">Update Info</span> 
-                                </a> 
-                            </li> 
-                        <div class="indicator"></div></ul> 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12"> 
-                        
-                        <div class="tab-content profile-tab-content"> 
-                            <div class="tab-pane active" id="home-2"> 
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <!-- Personal-Information -->
-                                        <div class="panel panel-default panel-fill">
-                                            <div class="panel-heading"> 
-                                                <h3 class="panel-title">Personal Information</h3> 
-                                            </div> 
-                                            <div class="panel-body"> 
-                                                <div class="about-info-p">
-                                                    <strong>Full Name</strong>
-                                                    <br/>
-                                                    <p class="text-muted"><?php echo $pengguna->full_name;?></p>
-                                                </div>
-                                                <div class="about-info-p">
-                                                    <strong>Address</strong>
-                                                    <br/>
-                                                    <p class="text-muted"><?php echo $pengguna->address;?></p>
-                                                </div>
-                                                <div class="about-info-p">
-                                                    <strong>IC Number</strong>
-                                                    <br/>
-                                                    <p class="text-muted"><?php echo $pengguna->ic_no;?></p>
-                                                </div>
-                                                <div class="about-info-p m-b-0">
-                                                    <strong>Contact Number</strong>
-                                                    <br/>
-                                                    <p class="text-muted">+60<?php echo $pengguna->contact_no;?></p>
-                                                </div>
-                                                <div class="about-info-p m-b-0">
-                                                    <strong>Email Address</strong>
-                                                    <br/>
-                                                    <p class="text-muted"><?php echo $pengguna->email;?></p>
-                                                </div>
-                                                <div class="about-info-p m-b-0">
-                                                    <strong>Gender</strong>
-                                                    <br/>
-                                                    <p class="text-muted"><?php if($pengguna->gender == 0)
-                                                        {
-                                                        echo "Male";
-                                                        }
-                                                        else
-                                                        {
-                                                        echo "Female";}?></p>
-                                            </div> 
-                                            <div class="about-info-p m-b-0">
-                                                    <strong>Race</strong>
-                                                    <br/>
-                                                    <p class="text-muted"><?php if($pengguna->race == 1)
-                                                        {
-                                                        echo "Melayu";
-                                                        }
-                                                        else if($pengguna->race == 2)
-                                                        {
-                                                        echo "Cina";
-                                                        }
-                                                        else if($pengguna->race == 3)
-                                                        {
-                                                        echo "India";
-                                                        }
-                                                        else if($pengguna->race == 4)
-                                                        {
-                                                        echo "Lain-Lain";
-                                                        }?></p>
-                                            </div>
-                                            <div class="about-info-p m-b-0">
-                                                    <strong>Religion</strong>
-                                                    <br/>
-                                                    <p class="text-muted"><?php if($pengguna->religion == 1)
-                                                        {
-                                                        echo "Islam";
-                                                        }
-                                                        else if($pengguna->religion == 2)
-                                                        {
-                                                        echo "Buddha";
-                                                        }
-                                                        else if($pengguna->religion == 3)
-                                                        {
-                                                        echo "Hindu";
-                                                        }
-                                                        else if($pengguna->religion == 4)
-                                                        {
-                                                        echo "Kristian";
-                                                        }
-                                                        else if($pengguna->religion == 5)
-                                                        {
-                                                        echo "Lain-Lain";
-                                                        }?></p>
-                                            </div>
-                                            </div> 
-                                        </div>
-                                        <!-- Personal-Information -->
-                                    </div>
-
-
-                                    <div class="col-md-8">
-                                        <!-- Personal-Information -->
-                                        <div class="panel panel-default panel-fill">
-                                            <div class="panel-heading"> 
-                                                <h3 class="panel-title">Account Information</h3> 
-                                            </div> 
-                                            <br />
-                                            <div class="about-info-p m-b-0">
-                                                    <strong>&nbsp;&nbsp;&nbsp;&nbsp;Username</strong>
-                                                    <br/>
-                                                    <p class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $pengguna->username;?></p>
-                                            </div>
-                                            <div class="about-info-p m-b-0">
-                                                    <strong>&nbsp;&nbsp;&nbsp;&nbsp;Password</strong>
-                                                    <br/>
-                                                    <p class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $pengguna->password;?></p>
-                                            </div>
-                                            <div class="about-info-p m-b-0">
-                                                    <strong>&nbsp;&nbsp;&nbsp;&nbsp;Level</strong>
-                                                    <br/>
-                                                    <p class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;<?php if($pengguna->level == 1)
-                                                        {
-                                                        echo "Administrator";
-                                                        }
-                                                        else if($pengguna->level == 2)
-                                                        {
-                                                        echo "Bus Driver";
-                                                        }
-                                                        else if($pengguna->level == 3)
-                                                        {
-                                                        echo "Passenger";
-                                                        }
-                                                        ?></p>
-                                            </div>
-                                            <div class="about-info-p m-b-0">
-                                                    <strong>&nbsp;&nbsp;&nbsp;&nbsp;Status</strong>
-                                                    <br/>
-                                                    <p class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;<?php if($pengguna->status == 0)
-                                                        {
-                                                        echo "Not Active";
-                                                        }
-                                                        else if($pengguna->status == 1)
-                                                        {
-                                                        echo "Active";
-                                                        }
-                                                        ?></p>
-                                            </div>                                          
-                                        </div>
-                                        <!-- Personal-Information -->
-                                    </div>
-
-                                </div>
-                            </div> 
-                        </div> 
-                    </div>
-                    </div>
-                </div> <!-- container -->
-                               
+                <div class="content"> 
+                <center><img src="<?php echo base_url().'images/buns_map.jpg'?>" width="1000">  </center>         
                 </div> <!-- content -->
 
                 <footer class="footer text-right">

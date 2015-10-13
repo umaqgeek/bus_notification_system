@@ -92,19 +92,19 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_generate');?>" class="waves-effect"><i class="md md-event"></i><span>Generate QR Code </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/admin_generate');?>" class="waves-effect"><i class="md md-pages"></i><span>Generate QR Code </span></a>
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_locate');?>" class="waves-effect"><i class="md md-palette"></i><span>Manage Location </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/admin_locate');?>" class="waves-effect"><i class="md md-my-location"></i><span>Manage Location </span></a>
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_locatetype');?>" class="waves-effect"><i class="md md-invert-colors-on"></i><span>Manage Location Type </span></a> 
+                                <a href="<?php echo site_url ('daftar_masuk/admin_locatetype');?>" class="waves-effect"><i class="md md-store-mall-directory"></i><span>Manage Location Type </span></a> 
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_manage');?>" class="waves-effect"><i class="md md-redeem"></i> <span>Manage User </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/admin_manage');?>" class="waves-effect"><i class="md md-perm-identity"></i><span>Manage User </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -440,11 +440,11 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/driver_bus');?>" class="waves-effect"><i class="md md-event"></i><span>Select Bus </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/driver_bus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/driver_maps');?>" class="waves-effect"><i class="md md-palette"></i><span>View Maps </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/driver_maps');?>" class="waves-effect"><i class="md md-public"></i><span>View Maps </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -781,7 +781,7 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/user_view');?>" class="waves-effect"><i class="md md-event"></i><span>View Maps </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/user_view');?>" class="waves-effect"><i class="md md-public"></i><span>View Maps </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
