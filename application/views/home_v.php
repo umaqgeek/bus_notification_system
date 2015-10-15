@@ -96,15 +96,15 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_locate');?>" class="waves-effect"><i class="md md-my-location"></i><span>Manage Location </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/location');?>" class="waves-effect"><i class="md md-my-location"></i><span>Manage Location </span></a>
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_locatetype');?>" class="waves-effect"><i class="md md-store-mall-directory"></i><span>Manage Location Type </span></a> 
+                                <a href="<?php echo site_url ('daftar_masuk/locatetype');?>" class="waves-effect"><i class="md md-store-mall-directory"></i><span>Manage Location Type </span></a> 
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_manage');?>" class="waves-effect"><i class="md md-perm-identity"></i><span>Manage User </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/user');?>" class="waves-effect"><i class="md md-perm-identity"></i><span>Manage User </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -122,9 +122,6 @@
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
-                    
-                
-
                 <div class="wraper container-fluid">
                     <div class="row">
                         <div class="col-sm-12">
@@ -143,13 +140,13 @@
                         <div class="col-lg-6 col-md-9 col-sm-9">
                             <ul class="nav nav-tabs tabs">
                             <li class="active tab">
-                                <a href="#home-2" data-toggle="tab" aria-expanded="false" class="active"> 
+                                <a href="<?php echo site_url ('daftar_masuk/index');?>" data-toggle="tab" aria-expanded="false" class="active"> 
                                     <span class="visible-xs"><i class="fa fa-home"></i></span> 
                                     <span class="hidden-xs">About Me</span> 
                                 </a> 
                             </li> 
                             <li class="tab"> 
-                                <a href="#profile-2" data-toggle="tab" aria-expanded="false"> 
+                                <a href="<?php echo site_url ('daftar_masuk/admin_update');?>" aria-expanded="false" > 
                                     <span class="visible-xs"><i class="fa fa-user"></i></span> 
                                     <span class="hidden-xs">Update Info</span> 
                                 </a> 
@@ -305,12 +302,48 @@
                                             </div>                                          
                                         </div>
                                         <!-- Personal-Information -->
-                                    </div>
+                                    </div></div>
+                            </div>
 
+                                <div class="tab-pane" id="settings-2">
+                                <!-- Personal-Information -->
+                                <div class="panel panel-default panel-fill">
+                                    <div class="panel-heading"> 
+                                        <h3 class="panel-title">Edit Profile</h3> 
+                                    </div> 
+                                    <div class="panel-body"> 
+                                        <form role="form">
+                                            <div class="form-group">
+                                                <label for="FullName">Full Name</label>
+                                                <input type="text" value="John Doe" id="FullName" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Email">Email</label>
+                                                <input type="email" value="first.last@example.com" id="Email" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Username">Username</label>
+                                                <input type="text" value="john" id="Username" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="Password">Password</label>
+                                                <input type="password" placeholder="6 - 15 Characters" id="Password" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="RePassword">Re-Password</label>
+                                                <input type="password" placeholder="6 - 15 Characters" id="RePassword" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="AboutMe">About Me</label>
+                                                <textarea style="height: 125px;" id="AboutMe" class="form-control">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</textarea>
+                                            </div>
+                                            <button class="btn btn-primary waves-effect waves-light w-md" type="submit">Save</button>
+                                        </form>
+										</div> 
+									</div>
                                 </div>
                             </div> 
-                        </div> 
-                    </div>
+						</div>
                     </div>
                 </div> <!-- container -->
                                
@@ -483,13 +516,13 @@
                         <div class="col-lg-6 col-md-9 col-sm-9">
                             <ul class="nav nav-tabs tabs">
                             <li class="active tab">
-                                <a href="#home-2" data-toggle="tab" aria-expanded="false" class="active"> 
+                                <a href="<?php echo site_url ('daftar_masuk/index');?>" data-toggle="tab" aria-expanded="false" class="active"> 
                                     <span class="visible-xs"><i class="fa fa-home"></i></span> 
                                     <span class="hidden-xs">About Me</span> 
                                 </a> 
                             </li> 
                             <li class="tab"> 
-                                <a href="#profile-2" data-toggle="tab" aria-expanded="false"> 
+                                <a href="<?php echo site_url ('daftar_masuk/driver_update');?>" aria-expanded="false"> 
                                     <span class="visible-xs"><i class="fa fa-user"></i></span> 
                                     <span class="hidden-xs">Update Info</span> 
                                 </a> 
@@ -820,13 +853,13 @@
                         <div class="col-lg-6 col-md-9 col-sm-9">
                             <ul class="nav nav-tabs tabs">
                             <li class="active tab">
-                                <a href="#home-2" data-toggle="tab" aria-expanded="false" class="active"> 
+                                <a href="<?php echo site_url ('daftar_masuk/index');?>" data-toggle="tab" aria-expanded="false" class="active"> 
                                     <span class="visible-xs"><i class="fa fa-home"></i></span> 
                                     <span class="hidden-xs">About Me</span> 
                                 </a> 
                             </li> 
                             <li class="tab"> 
-                                <a href="#profile-2" data-toggle="tab" aria-expanded="false"> 
+                                <a href="<?php echo site_url ('daftar_masuk/user_update');?>" data-toggle="tab" aria-expanded="false"> 
                                     <span class="visible-xs"><i class="fa fa-user"></i></span> 
                                     <span class="hidden-xs">Update Info</span> 
                                 </a> 

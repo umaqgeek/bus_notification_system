@@ -62,22 +62,22 @@
                         </div>
                         <div class="user-info">
                             <div class="dropdown">
-                                <a><!--<?php echo $pengguna->username;?></a>-->
+                                <a><?php echo $this->session->userdata('username');?></a>
                             </div>
                             
-                            <p class="text-muted m-0"><!--<?php if($pengguna->level == 1)
+                            <p class="text-muted m-0"><?php if($this->session->userdata('level') == 1)
                                                         {
                                                         echo "Administrator";
                                                         }
-                                                        else if($pengguna->level == 2)
+                                                        else if($this->session->userdata('level') == 2)
                                                         {
                                                         echo "Bus Driver";
                                                         }
-                                                        else if($pengguna->level == 3)
+                                                        else if($this->session->userdata('level') == 3)
                                                         {
                                                         echo "Passenger";
                                                         }
-                                                        ?></p> -->
+                                                        ?></p>
                         </div>
                     </div>
                     <!--- Divider -->
@@ -130,27 +130,14 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>1</td>
-                                                                <td>WMK1</td>
-                                                                <td><a href="">Select</a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2</td>
-                                                                <td>WMK2</td>
-                                                                <td><a href="">Select</a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>3</td>
-                                                                <td>WMK3</td>
-                                                                <td><a href="">Select</a></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>4</td>
-                                                                <td>WMK4</td>
-                                                                <td><a href="">Select</a></td>
-                                                            </tr>
-                                                            
+                                                                <?php
+                                                                    for ($i = 0;$i < count($bus); ++$i) 
+                                                                        { ?>
+                                                                       <tr>
+                                                                       <td><?php echo ($i+1); ?></td>
+                                                                       <td><?php echo $bus[$i]->bus_plate_no; ?></td>
+                                                                       <td><a href="">Select</a></td>
+                                                                       </tr><?php } ?>
                                                         </tbody>
                                                     </table>
                                                 </div>

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <?php 
+    foreach($css_files as $file): ?>
+    <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+    <?php endforeach; ?>
+    <?php foreach($js_files as $file): ?>
+    <script src="<?php echo $file; ?>"></script>
+    <?php endforeach; ?>
         <meta charset="utf-8">
         <link rel="shortcut icon" href="<?php echo base_url().'images/buns.png'?>">
         <title>BuNS - Bus Notification System</title>
@@ -62,22 +69,22 @@
                         </div>
                         <div class="user-info">
                             <div class="dropdown">
-                                <!--<a><?php echo $pengguna->username;?></a>-->
+                                <a><?php echo $this->session->userdata('username');?></a>
                             </div>
                             
-                            <p class="text-muted m-0"><!--<?php if($pengguna->level == 1)
+                            <p class="text-muted m-0"><?php if($this->session->userdata('level') == 1)
                                                         {
                                                         echo "Administrator";
                                                         }
-                                                        else if($pengguna->level == 2)
+                                                        else if($this->session->userdata('level') == 2)
                                                         {
                                                         echo "Bus Driver";
                                                         }
-                                                        else if($pengguna->level == 3)
+                                                        else if($this->session->userdata('level') == 3)
                                                         {
                                                         echo "Passenger";
                                                         }
-                                                        ?></p>-->
+                                                        ?></p>
                         </div>
                     </div>
                     <!--- Divider -->
@@ -92,15 +99,15 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_locate');?>" class="waves-effect"><i class="md md-my-location"></i><span>Manage Location </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/location');?>" class="waves-effect"><i class="md md-my-location"></i><span>Manage Location </span></a>
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_locatetype');?>" class="waves-effect"><i class="md md-store-mall-directory"></i><span>Manage Location Type </span></a> 
+                                <a href="<?php echo site_url ('daftar_masuk/locatetype');?>" class="waves-effect"><i class="md md-store-mall-directory"></i><span>Manage Location Type </span></a> 
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_manage');?>" class="waves-effect"><i class="md md-perm-identity"></i><span>Manage User </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/user');?>" class="waves-effect"><i class="md md-perm-identity"></i><span>Manage User </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -116,8 +123,17 @@
             <!-- Start right Content here -->
             <!-- ============================================================== -->                      
             <div class="content-page">
-                <!-- content -->
-                </div> 
+                <div class="content"><!--
+                <a href='<?php echo site_url('daftar_masuk/bus')?>'>Bus</a> |
+                <a href='<?php echo site_url('daftar_masuk/busDriver')?>'>Bus Driver</a> |
+                <a href='<?php echo site_url('daftar_masuk/driverLocation')?>'>Driver Location</a> |
+                <a href='<?php echo site_url('daftar_masuk/location')?>'>location </a> |
+                <a href='<?php echo site_url('daftar_masuk/user')?>'>User</a> |         
+                <a href='daftar_masuk'>Back</a> -->
+                <?php echo $output; ?>
+            </div> 
+            </div>
+            
 
                 <footer class="footer text-right">
                     2015 © BuNS.

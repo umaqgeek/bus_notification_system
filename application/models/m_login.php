@@ -55,11 +55,39 @@ class M_login extends CI_Model
                  'username'=>$this->input->post('user_name'),
                  'email'=>$this->input->post('email_address'),
                  'password'=>md5($this->input->post('password')),
-         'level'=>"3",
-         'status'=>"1"
+                 'level'=>"3",
+                 'status'=>"1"
                  );
      $this->db->insert('user',$data);
      return true;
+  }
+
+  function getBus()
+  {
+    $q = $this->db->query("SELECT * FROM bus");
+ 
+    if($q->num_rows() > 0)
+    {
+      foreach ($q->result() as $row)
+      {
+        $data[] = $row;
+      }
+      return $data;
+    }
+  }
+
+  function getUser()
+  {
+    $r = $this->db->query("SELECT * FROM user");
+ 
+    if($r->num_rows() > 0)
+    {
+      foreach ($r->result() as $row)
+      {
+        $data[] = $row;
+      }
+      return $data;
+    }
   }
   
 }  

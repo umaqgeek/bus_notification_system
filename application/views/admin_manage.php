@@ -62,22 +62,22 @@
                         </div>
                         <div class="user-info">
                             <div class="dropdown">
-                                <!--<a><?php echo $pengguna->username;?></a>-->
+                                <a><?php echo $this->session->userdata('username');?></a>
                             </div>
                             
-                            <p class="text-muted m-0"><!--<?php if($pengguna->level == 1)
+                            <p class="text-muted m-0"><?php if($this->session->userdata('level') == 1)
                                                         {
                                                         echo "Administrator";
                                                         }
-                                                        else if($pengguna->level == 2)
+                                                        else if($this->session->userdata('level') == 2)
                                                         {
                                                         echo "Bus Driver";
                                                         }
-                                                        else if($pengguna->level == 3)
+                                                        else if($this->session->userdata('level') == 3)
                                                         {
                                                         echo "Passenger";
                                                         }
-                                                        ?></p>-->
+                                                        ?></p>
                         </div>
                     </div>
                     <!--- Divider -->
@@ -92,11 +92,11 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_locate');?>" class="waves-effect"><i class="md md-my-location"></i><span>Manage Location </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/location');?>" class="waves-effect"><i class="md md-my-location"></i><span>Manage Location </span></a>
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/admin_locatetype');?>" class="waves-effect"><i class="md md-store-mall-directory"></i><span>Manage Location Type </span></a> 
+                                <a href="<?php echo site_url ('daftar_masuk/locatetype');?>" class="waves-effect"><i class="md md-store-mall-directory"></i><span>Manage Location Type </span></a> 
                             </li>
 
                             <li>

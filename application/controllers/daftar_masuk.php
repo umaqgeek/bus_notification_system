@@ -7,8 +7,9 @@ class Daftar_masuk extends CI_Controller
     parent::__construct();
     
     $this->load->model('m_login');
+    //$this->load->model('grocery_crud_model.php');
     
-    $this->load->library(array('form_validation','session'));
+    $this->load->library('session');
     
     $this->load->database();
     
@@ -119,52 +120,47 @@ class Daftar_masuk extends CI_Controller
     $this->load->view('user_view.php');
   }
   
+  function user_update()
+  {
+    $this->load->helper("url");
+    $this->load->model("m_login");
+    $users = $this->m_login->getUser();           
+    $data['user'] = $users;
+    $this->load->view('user_update.php',$data);
+  }
 
    public function bus()
    {
         $this->grocery_crud->set_table('bus');
         $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
+        $this->_example_output($output);   
     }
 
     public function busDriver()
    {
         $this->grocery_crud->set_table('bus_driver');
         $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
+        $this->_example_output($output);   
     }
 
-    public function driverLocation()
+    public function locatetype()
    {
         $this->grocery_crud->set_table('driver_location');
         $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
+        $this->_admin_locatetype($output);   
     }
-
 
     public function location()
    {
         $this->grocery_crud->set_table('location');
         $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
+        $this->_admin_locate($output);   
     }
     
      function _example_output($output = null)
  
     {
-        $this->load->view('our_templates.php',$output);    
+        $this->load->view('manage_user.php',$output);    
     }
   
   function admin_generate()
@@ -173,16 +169,14 @@ class Daftar_masuk extends CI_Controller
     $this->load->view('admin_generate.php');
   }
 
-  function admin_locate()
+  function _admin_locate($output = null)
   {
-    $this->load->helper("url");
-    $this->load->view('admin_locate.php');
+    $this->load->view('admin_locate.php',$output);
   }
 
-  function admin_locatetype()
+  function _admin_locatetype($output = null)
   {
-    $this->load->helper("url");
-    $this->load->view('admin_locatetype.php');
+    $this->load->view('admin_locatetype.php',$output);
   }
 
   function admin_manage()
@@ -190,11 +184,23 @@ class Daftar_masuk extends CI_Controller
     $this->load->helper("url");
     $this->load->view('admin_manage.php');
   }
+
+  function admin_update()
+  {
+    $this->load->helper("url");
+    $this->load->model("m_login");
+    $users = $this->m_login->getUser();           
+    $data['user'] = $users;
+    $this->load->view('admin_update.php',$data);
+  }
   
   function driver_bus()
   {
     $this->load->helper("url");
-    $this->load->view('driver_bus.php');
+    $this->load->model("m_login");
+    $deptresult = $this->m_login->getBus();           
+    $data['bus'] = $deptresult;
+    $this->load->view('driver_bus.php',$data);
   }
   
   function driver_scan()
@@ -207,6 +213,15 @@ class Daftar_masuk extends CI_Controller
   {
     $this->load->helper("url");
     $this->load->view('driver_maps.php');
+  }
+
+  function driver_update()
+  {
+    $this->load->helper("url");
+    $this->load->model("m_login");
+    $users = $this->m_login->getUser();           
+    $data['user'] = $users;
+    $this->load->view('driver_update.php',$data);
   }
 
 }
