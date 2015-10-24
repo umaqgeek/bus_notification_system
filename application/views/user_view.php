@@ -105,9 +105,38 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
                 <!-- Start content -->
-                <div class="content"> 
-                <center><img src="<?php echo base_url().'images/buns_map.jpg'?>" width="1000">  </center>         
-                </div> <!-- content -->
+                 <div class="content">
+                 <div class="row">
+                 <div class="col-md-12">
+                 <div class="panel panel-default"> 
+                 <center><img src="<?php echo base_url().'images/bus.png'?>" class="img-responsive" ></center>         
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>No.</th>
+                                                                <th>Bus Plate Number</th>
+                                                                <th>Driver</th>
+                                                                <th>Location</th>
+                                                                <th>Date Time</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                <?php
+                                                                    for ($i = 0;$i < count($location); ++$i) 
+                                                                        { ?>
+                                                                       <tr>
+                                                                       <td><?php echo ($i+1); ?></td>
+                                                                       <td><?php echo $location[$i]->driver_location_id; ?></td>
+                                                                       <td><?php echo $location[$i]->qrcode_id; ?></td>
+                                                                       <td><?php echo $location[$i]->bus_driver_id; ?></td>
+                                                                       <td><?php echo $location[$i]->datetime; ?></td>
+                                                                       </tr><?php } ?>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                 </div></div> <!-- content -->
 
                 <footer class="footer text-right">
                     2015 © BuNS.

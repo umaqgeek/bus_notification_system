@@ -109,8 +109,7 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
                 <!-- Start content -->
-                <div class="content">
-                    
+                <div class="content">   
                 <div class="row">
                             <div class="col-md-12">
                                 <div class="panel panel-default">
@@ -136,7 +135,7 @@
                                                                        <tr>
                                                                        <td><?php echo ($i+1); ?></td>
                                                                        <td><?php echo $bus[$i]->bus_plate_no; ?></td>
-                                                                       <td><a href="">Select</a></td>
+                                                                       <td><a href="<?php echo site_url ('daftar_masuk/driver_scan');?>">Select Bus</a></td>
                                                                        </tr><?php } ?>
                                                         </tbody>
                                                     </table>

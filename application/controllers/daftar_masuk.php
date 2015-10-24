@@ -117,7 +117,10 @@ class Daftar_masuk extends CI_Controller
   function user_view()
   {
     $this->load->helper("url");
-    $this->load->view('user_view.php');
+    $this->load->model("m_login");
+    $location = $this->m_login->getLocation();           
+    $data['location'] = $location;
+    $this->load->view('user_view.php',$data);
   }
   
   function user_update()
@@ -212,7 +215,10 @@ class Daftar_masuk extends CI_Controller
   function driver_maps()
   {
     $this->load->helper("url");
-    $this->load->view('driver_maps.php');
+    $this->load->model("m_login");
+    $location = $this->m_login->getLocation();           
+    $data['location'] = $location;
+    $this->load->view('driver_maps.php',$data);
   }
 
   function driver_update()
@@ -223,6 +229,19 @@ class Daftar_masuk extends CI_Controller
     $data['user'] = $users;
     $this->load->view('driver_update.php',$data);
   }
+
+  function selectBus($stat=1)
+        {
+          $this->load->model("m_login");
+            if ($stat == 1) {
+                $data['bus'] = $this->m_login->getBus();
+                echo $this->viewpage('driver_bus', $data);
+            } else if ($stat == 2) {
+                $busx = $this->input->get('bu');
+                $data['busx'] = $busx;
+                echo $this->viewpage('driver_scan', $data);
+            }
+        }
 
 }
 

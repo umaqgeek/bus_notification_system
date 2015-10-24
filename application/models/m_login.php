@@ -76,6 +76,20 @@ class M_login extends CI_Model
     }
   }
 
+  function getLocation()
+  {
+    $s = $this->db->query("SELECT * FROM driver_location");
+ 
+    if($s->num_rows() > 0)
+    {
+      foreach ($s->result() as $row)
+      {
+        $data[] = $row;
+      }
+      return $data;
+    }
+  }
+
   function getUser()
   {
     $r = $this->db->query("SELECT * FROM user");
