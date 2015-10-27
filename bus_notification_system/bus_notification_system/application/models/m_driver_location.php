@@ -4,10 +4,10 @@
 	  function getAll() {
 		  $this->db->select('*');
 		  $this->db->from('driver_location dl');
-                  $this->db->join('bus_driver dr', 'dr.dr_id = dl.dr_id', 'left');
+                  $this->db->join('driver dr', 'dr.dr_id = dl.dr_id', 'left');
                   $this->db->join('location lo', 'lo.lo_id = dl.lo_id', 'left');
-                  $this->db->join('user u', 'u.u_id = dr.u_id', 'left');
-                  $this->db->join('bus bu', 'bu.bu_id = dr.bu_id', 'left');
+                  $this->db->join('user u', 'u.id = dr.u_id', 'left');
+                  $this->db->join('bus bu', 'bu.bus_id = dr.bu_id', 'left');
                   $this->db->group_by('dl.dl_id');
                   $this->db->order_by('dl.dl_datetime', 'DESC');
 		  $q = $this->db->get();

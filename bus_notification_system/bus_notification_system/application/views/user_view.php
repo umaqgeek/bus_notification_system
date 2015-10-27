@@ -90,6 +90,9 @@
                             <li>
                                 <a href="<?php echo site_url ('daftar_masuk/user_view');?>" class="waves-effect"><i class="md md-public"></i><span>View Maps </span></a>
                             </li>
+                            <li>
+                                <a href="<?php echo site_url ('daftar_masuk/getList1');?>" class="waves-effect"><i class="md md-public"></i><span>View Schedule</span></a>
+                            </li>
                         </ul>
                         <div class="clearfix"></div>
                     </div>
