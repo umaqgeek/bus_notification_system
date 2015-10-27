@@ -8,14 +8,11 @@ class Daftar_masuk extends CI_Controller
     
     $this->load->model('m_login');
     
-    //$this->load->library(array('form_validation','session'));
-    
     $this->load->database();
     
     $this->load->helper('url');
 
     $this->load->library('grocery_CRUD');
-    
   }
   
   
@@ -26,7 +23,8 @@ class Daftar_masuk extends CI_Controller
       if($session == FALSE)
       {
         redirect('daftar_masuk/login_form');
-      }else
+      }
+      else
       {
         redirect('tapak');
       }
@@ -42,7 +40,8 @@ class Daftar_masuk extends CI_Controller
       if($this->form_validation->run()==FALSE)
       {
         $this->load->view('form_login');
-      }else
+      }
+      else
       {
        $username = $this->input->post('username');
        $password = $this->input->post('password');
@@ -57,7 +56,8 @@ class Daftar_masuk extends CI_Controller
           $this->session->set_userdata('level',$level);
          
          redirect('tapak');
-        }else
+        }
+        else
         {
          echo " <script>
                 alert('Please check your username, password and level.');
@@ -69,49 +69,37 @@ class Daftar_masuk extends CI_Controller
   
 
   public function register()
- {
-  $this->load->view('registration_view');//loads the register_view.php file in views folder
- }
+  {
+    $this->load->view('registration_view');//loads the register_view.php file in views folder
+  }
   
   
   public function registration()
- {
-  $this->load->library('form_validation');
-  // field name, error message, validation rules
-  $this->form_validation->set_rules('ic_no', 'Ic No', 'trim|required|min_length[5]|xss_clean');
-  $this->form_validation->set_rules('full_name', 'Full Name', 'trim|required|min_length[5]|xss_clean');
-  $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[5]|xss_clean');
-  $this->form_validation->set_rules('contact_num', 'Contact Number', 'trim|required|min_length[5]|xss_clean');
-  $this->form_validation->set_rules('user_name', 'User Name', 'trim|required|min_length[4]|xss_clean');
-  $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|min_length[5]|xss_clean');
-  $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
-  $this->form_validation->set_rules('con_password', 'Password Confirmation', 'trim|required|matches[password]');
-  $this->form_validation->set_rules('gender', 'Gender', 'trim|required|""');
-
-  if($this->form_validation->run() == FALSE)
   {
-   
-    $this->load->view('registration_view');
-  }
-  else
-  {
-   $this->m_login->add_user();
-   //$this->thank();
-   $this->load->view('success');
-  }
- }
+   $this->load->library('form_validation');
+   // field name, error message, validation rules
+   $this->form_validation->set_rules('ic_no', 'Ic No', 'trim|required|min_length[5]|xss_clean');
+   $this->form_validation->set_rules('full_name', 'Full Name', 'trim|required|min_length[5]|xss_clean');
+   $this->form_validation->set_rules('address', 'Address', 'trim|required|min_length[5]|xss_clean');
+   $this->form_validation->set_rules('contact_num', 'Contact Number', 'trim|required|min_length[5]|xss_clean');
+   $this->form_validation->set_rules('user_name', 'User Name', 'trim|required|min_length[4]|xss_clean');
+   $this->form_validation->set_rules('email_address', 'Email Address', 'trim|required|min_length[5]|xss_clean');
+   $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[4]|max_length[32]');
+   $this->form_validation->set_rules('con_password', 'Password Confirmation', 'trim|required|matches[password]');
+   $this->form_validation->set_rules('gender', 'Gender', 'trim|required|""');
 
-  
-    public function choose_bus()
+   if($this->form_validation->run() == FALSE)
    {
-      
-         $data['i']=$this->m_login->selectBus();  
-         //return the data in view  
-         $this->load->view('bus_choose', $data);  
-     
+    $this->load->view('registration_view');
    }
-  
-
+   else
+   {
+    $this->m_login->add_user();
+    //$this->thank();
+    $this->load->view('success');
+   }
+  }
+ 
   public function logout()
   {
    $this->session->sess_destroy();
@@ -125,16 +113,14 @@ class Daftar_masuk extends CI_Controller
         $this->grocery_crud->set_table('user');
         $output = $this->grocery_crud->render();
  
-        
-
          $this->_example_output($output);   
     }
 
-  function user_view()
+  /*function user_view()
   {
     $this->load->helper("url");
     $this->load->view('user_view.php');
-  }
+  }*/
   
 
    public function bus()
@@ -148,15 +134,11 @@ class Daftar_masuk extends CI_Controller
     }
 
  
-
-
     public function busDriver()
    {
         $this->grocery_crud->set_table('bus_driver');
         $output = $this->grocery_crud->render();
  
-        
-
          $this->_example_output($output);   
     }
 
@@ -172,11 +154,7 @@ class Daftar_masuk extends CI_Controller
 
 
    public function chooseLocation()
-   {
-     //$this->load->database();  
-         //load the model  
-     //$this->load->model('m_login'); 
-
+   {     
      $data['h']=$this->m_login->selectLocation();  
          //return the data in view  
      $this->load->view('location_view', $data);  
@@ -193,55 +171,62 @@ class Daftar_masuk extends CI_Controller
          $this->_example_output($output);   
     }
     
-     function _example_output($output = null)
+    /*function admin_generate()
+    {
+     $this->load->helper("url");
+     $this->load->view('admin_generate.php');
+    }*/
+
+    function admin_locate()
+    {
+     $this->load->helper("url");
+     $this->load->view('admin_locate.php');
+    }
+
+    function admin_locatetype()
+    {
+     $this->load->helper("url");
+     $this->load->view('admin_locatetype.php');
+    }
+
+    function admin_manage()
+    {
+     $this->load->helper("url");
+     $this->load->view('admin_manage.php');
+    }
+  
+    function driver_bus()
+    {
+     //$this->load->helper("url");
+     $data['i']=$this->m_login->selectBus();  
+         //return the data in view  
+     $this->load->view('driver_bus', $data);  
+    }
+  
+    function driver_scan()
+    {
+     $this->load->helper("url");
+     $this->load->view('driver_scan.php');
+    }
+  
+    function driver_maps()
+    {
+     //$this->load->CI_Controller("map");
+     $this->load->view('driver_maps.php');
+    }
+
+    function locateqr() 
+    {
+         
+    }
+  
+
+    function _example_output($output = null)
  
     {
         $this->load->view('our_templates.php',$output);    
     }
   
-  function admin_generate()
-  {
-    $this->load->helper("url");
-    $this->load->view('admin_generate.php');
-  }
-
-  function admin_locate()
-  {
-    $this->load->helper("url");
-    $this->load->view('admin_locate.php');
-  }
-
-  function admin_locatetype()
-  {
-    $this->load->helper("url");
-    $this->load->view('admin_locatetype.php');
-  }
-
-  function admin_manage()
-  {
-    $this->load->helper("url");
-    $this->load->view('admin_manage.php');
-  }
-  
-  function driver_bus()
-  {
-    //$this->load->helper("url");
-   $data['i']=$this->m_login->selectBus();  
-         //return the data in view  
-   $this->load->view('driver_bus', $data);  
-  }
-  
-  function driver_scan()
-  {
-    $this->load->helper("url");
-    $this->load->view('driver_scan.php');
-  }
-  
-  function driver_maps()
-  {
-    //$this->load->CI_Controller("map");
-    $this->load->view('driver_maps.php');
-  }
 
 }
 
