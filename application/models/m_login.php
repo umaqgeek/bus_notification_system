@@ -104,6 +104,17 @@ class M_login extends CI_Model
     }
   }
   
+  function getAll($table) {
+      $this->db->select('*');
+      $this->db->from($table);
+      $q = $this->db->get();
+      if($q->num_rows() > 0) {
+        foreach($q->result() as $r) {
+          $d[] = $r;
+        }
+        return $d;
+      }
+    }
 }  
 
 ?>

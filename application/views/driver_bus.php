@@ -129,14 +129,14 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <?php
-                                                                    for ($i = 0;$i < count($bus); ++$i) 
+                                                                <?php if (isset($bus) && !empty($bus)) {
+                                                                    foreach ($bus as $bu) //for ($i = 0;$i < count($bus); ++$i) 
                                                                         { ?>
                                                                        <tr>
-                                                                       <td><?php echo ($i+1); ?></td>
-                                                                       <td><?php echo $bus[$i]->bus_plate_no; ?></td>
-                                                                       <td><a href="<?php echo site_url ('daftar_masuk/driver_scan');?>">Select Bus</a></td>
-                                                                       </tr><?php } ?>
+                                                                       <td><?=$bu->bus_id; ?></td>
+                                                                       <td><?=$bu->bus_plate_no; ?></td>
+                                                                       <td><a href="<?=site_url ('daftar_masuk/select_bus/2?bu='.$bu->bus_id);?>">Select Bus</a></td>
+                                                                       </tr><?php } }?>
                                                         </tbody>
                                                     </table>
                                                 </div>
