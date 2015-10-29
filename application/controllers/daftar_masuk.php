@@ -7,7 +7,13 @@ class Daftar_masuk extends CI_Controller
     parent::__construct();
     
     $this->load->model('m_login');
+    //$this->load->model('grocery_crud_model.php');
     
+<<<<<<< HEAD
+=======
+    $this->load->library('session');
+    
+>>>>>>> origin/amarul
     $this->load->database();
     
     $this->load->helper('url');
@@ -112,25 +118,42 @@ class Daftar_masuk extends CI_Controller
    {
         $this->grocery_crud->set_table('user');
         $output = $this->grocery_crud->render();
+<<<<<<< HEAD
  
          $this->_example_output($output);   
+=======
+        $this->_example_output($output);   
+>>>>>>> origin/amarul
     }
 
   /*function user_view()
   {
     $this->load->helper("url");
+<<<<<<< HEAD
     $this->load->view('user_view.php');
   }*/
+=======
+    $this->load->model("m_login");
+    $location = $this->m_login->getLocation();           
+    $data['location'] = $location;
+    $this->load->view('user_view.php',$data);
+  }
+>>>>>>> origin/amarul
   
+  function user_update()
+  {
+    $this->load->helper("url");
+    $this->load->model("m_login");
+    $users = $this->m_login->getUser();           
+    $data['user'] = $users;
+    $this->load->view('user_update.php',$data);
+  }
 
    public function bus()
    {
         $this->grocery_crud->set_table('bus');
         $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
+        $this->_example_output($output);   
     }
 
  
@@ -138,20 +161,22 @@ class Daftar_masuk extends CI_Controller
    {
         $this->grocery_crud->set_table('bus_driver');
         $output = $this->grocery_crud->render();
+<<<<<<< HEAD
  
          $this->_example_output($output);   
+=======
+        $this->_example_output($output);   
+>>>>>>> origin/amarul
     }
 
-    public function driverLocation()
+    public function locatetype()
    {
         $this->grocery_crud->set_table('driver_location');
         $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
+        $this->_admin_locatetype($output);   
     }
 
+<<<<<<< HEAD
 
    public function chooseLocation()
    {     
@@ -161,18 +186,18 @@ class Daftar_masuk extends CI_Controller
    }
 
 
+=======
+>>>>>>> origin/amarul
     public function location()
    {
         $this->grocery_crud->set_table('location');
         $output = $this->grocery_crud->render();
- 
-        
-
-         $this->_example_output($output);   
+        $this->_admin_locate($output);   
     }
     
     /*function admin_generate()
     {
+<<<<<<< HEAD
      $this->load->helper("url");
      $this->load->view('admin_generate.php');
     }*/
@@ -227,6 +252,86 @@ class Daftar_masuk extends CI_Controller
         $this->load->view('our_templates.php',$output);    
     }
   
+=======
+        $this->load->view('manage_user.php',$output);    
+    }
+  
+  function admin_generate()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_generate.php');
+  }
+
+  function _admin_locate($output = null)
+  {
+    $this->load->view('admin_locate.php',$output);
+  }
+
+  function _admin_locatetype($output = null)
+  {
+    $this->load->view('admin_locatetype.php',$output);
+  }
+
+  function admin_manage()
+  {
+    $this->load->helper("url");
+    $this->load->view('admin_manage.php');
+  }
+
+  function admin_update()
+  {
+    $this->load->helper("url");
+    $this->load->model("m_login");
+    $users = $this->m_login->getUser();           
+    $data['user'] = $users;
+    $this->load->view('admin_update.php',$data);
+  }
+  
+  function driver_bus()
+  {
+    $this->load->helper("url");
+    $this->load->model("m_login");
+    $deptresult = $this->m_login->getBus();           
+    $data['bus'] = $deptresult;
+    $this->load->view('driver_bus.php',$data);
+  }
+  
+  /*function driver_scan()
+  {
+    $this->load->helper("url");
+    $this->load->view('driver_scan.php');
+  }*/
+  
+  function driver_maps()
+  {
+    $this->load->helper("url");
+    $this->load->model("m_login");
+    $location = $this->m_login->getLocation();           
+    $data['location'] = $location;
+    $this->load->view('driver_maps.php',$data);
+  }
+
+  function driver_update()
+  {
+    $this->load->helper("url");
+    $this->load->model("m_login");
+    $users = $this->m_login->getUser();           
+    $data['user'] = $users;
+    $this->load->view('driver_update.php',$data);
+  }
+>>>>>>> origin/amarul
+
+  function selectBus($stat=1)
+        {
+            if ($stat == 1) {
+                $data['bus'] = $this->m_login->getAll('bus bu');
+                $this->load->view('driver_bus', $data);
+            } else if ($stat == 2) {
+                $busx = $this->input->get('bu');
+                $data['busx'] = $busx;
+                $this->load->view('driver_scan', $data);
+            }
+        }
 
 }
 

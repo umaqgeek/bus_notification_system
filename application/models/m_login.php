@@ -33,6 +33,9 @@ class M_login extends CI_Model
    $this->db->select('gender');
    $this->db->select('race');
    $this->db->select('religion');
+   $this->db->select('level');
+   $this->db->select('status');
+   $this->db->select('password');
    $this->db->where('username', $username);
    $query = $this->db->get('user');
    
@@ -61,13 +64,66 @@ class M_login extends CI_Model
                  'username'=>$this->input->post('user_name'),
                  'email'=>$this->input->post('email_address'),
                  'password'=>md5($this->input->post('password')),
-         'level'=>$this->input->post('3'),
-         'status'=>$this->input->post('1')
+                 'level'=>"3",
+                 'status'=>"1"
                  );
      $this->db->insert('user',$data);
      return true;
   }
+
+  function getBus()
+  {
+    $q = $this->db->query("SELECT * FROM bus");
+ 
+    if($q->num_rows() > 0)
+    {
+      foreach ($q->result() as $row)
+      {
+        $data[] = $row;
+      }
+      return $data;
+    }
+  }
+
+  function getLocation()
+  {
+    $s = $this->db->query("SELECT * FROM driver_location");
+ 
+    if($s->num_rows() > 0)
+    {
+      foreach ($s->result() as $row)
+      {
+        $data[] = $row;
+      }
+      return $data;
+    }
+  }
+
+  function getUser()
+  {
+    $r = $this->db->query("SELECT * FROM user");
+ 
+    if($r->num_rows() > 0)
+    {
+      foreach ($r->result() as $row)
+      {
+        $data[] = $row;
+      }
+      return $data;
+    }
+  }
   
+  function getAll($table) {
+      $this->db->select('*');
+      $this->db->from($table);
+      $q = $this->db->get();
+      if($q->num_rows() > 0) {
+        foreach($q->result() as $r) {
+          $d[] = $r;
+        }
+        return $d;
+      }
+    }
 }  
 
 ?>
