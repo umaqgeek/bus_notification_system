@@ -206,11 +206,11 @@ class Daftar_masuk extends CI_Controller
     $this->load->view('driver_bus.php',$data);
   }
   
-  /*function driver_scan()
+  function driver_scan()
   {
     $this->load->helper("url");
     $this->load->view('driver_scan.php');
-  }*/
+  }
   
   function driver_maps()
   {
@@ -230,13 +230,15 @@ class Daftar_masuk extends CI_Controller
     $this->load->view('driver_update.php',$data);
   }
 
-  function selectBus($stat=1)
+  function select_Bus($stat=1)
         {
+          $this->load->model("m_login");
             if ($stat == 1) {
-                $data['bus'] = $this->m_login->getAll('bus bu');
-                $this->load->view('driver_bus', $data);
+                $data['bus'] = $this->m_login->getBus();
+                echo $this->viewpage('driver_bus', $data);
             } else if ($stat == 2) {
                 $busx = $this->input->get('bu');
+                //echo $busx;
                 $data['busx'] = $busx;
                 $this->load->view('driver_scan', $data);
             }

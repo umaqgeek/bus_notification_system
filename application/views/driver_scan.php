@@ -89,7 +89,7 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/selectBus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/driver_bus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
                             </li>
 
                             <li>
@@ -112,42 +112,56 @@
                 <div class="content">     
                 <div class="row">
                 <div class="col-md-12">
-                <center><video id="video" width="640" height="480" autoplay></video><br />
+                <center><video autoplay></video><br />
                 <button id="reset" class="btn btn-primary">Reset camera</button></center>
-                <canvas id="canvas" width="640" height="580"></canvas>
-
+                <script src="<?= base_url(); ?>assets/js/qcode-decoder.min.js"></script>
                 <script type="text/javascript">
-                // Put event listeners into place
-                window.addEventListener("DOMContentLoaded", function() {
-                // Grab elements, create settings, etc.
-                var canvas = document.getElementById("canvas"),
-                    context = canvas.getContext("2d"),
-                    video = document.getElementById("video"),
-                    videoObj = { "video": true },
-                    errBack = function(error) {
-                        console.log("Video capture error: ", error.code); 
-                    };
+ 
+                (function () {
+                'use strict';
 
-                // Put video listeners into place
-                if(navigator.getUserMedia) { // Standard
-                    navigator.getUserMedia(videoObj, function(stream) {
-                        video.src = stream;
-                        video.play();
-                    }, errBack);
-                } else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
-                    navigator.webkitGetUserMedia(videoObj, function(stream){
-                        video.src = window.webkitURL.createObjectURL(stream);
-                        video.play();
-                    }, errBack);
+                var qr = new QCodeDecoder();
+
+                if (!(qr.isCanvasSupported() && qr.hasGetUserMedia())) {
+                    alert('Your browser doesn\'t match the required specs.');
+                    throw new Error('Canvas and getUserMedia are required');
                 }
-                else if(navigator.mozGetUserMedia) { // Firefox-prefixed
-                    navigator.mozGetUserMedia(videoObj, function(stream){
-                        video.src = window.URL.createObjectURL(stream);
-                        video.play();
-                    }, errBack);
+
+                var video = document.querySelector('video');
+                var reset = document.querySelector('#reset');
+                var stop = document.querySelector('#stop');
+
+                function resultHandler(err, result) {
+                    if (err)
+                        return console.log(err.message);
+                    $.post("<?=site_url('driver/readBusID'); ?>", { bu:"<?=$busx; ?>", qrcode:result }).done(function(data) {
+                        alert(data);
+                        location.href='<?=site_url('driver/selectBus'); ?>';
+                    });
                 }
-            }, false);
+
+                // prepare a canvas element that will receive
+                // the image to decode, sets the callback for
+                // the result and then prepares the
+                // videoElement to send its source to the
+                // decoder.
+
+                qr.decodeFromCamera(video, resultHandler);
+
+                // attach some event handlers to reset and
+                // stop whenever we want.
+
+                reset.onclick = function () {
+                    qr.decodeFromCamera(video, resultHandler);
+                };
+
+              //    stop.onclick = function () {
+              //      qr.stop();
+              //    };
+
+                })();
             </script>
+        
         </div> 
         </div> 
         </div> 
