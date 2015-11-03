@@ -88,14 +88,14 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/driver_bus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/selectBus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
                             </li>
 
                             <li>
                                 <a href="<?php echo site_url ('daftar_masuk/driver_maps');?>" class="waves-effect"><i class="md md-public"></i><span>View Maps </span></a>
                             </li>
-                            <li>
-                                <a href="<?php echo site_url ('daftar_masuk/driver_loc');?>" class="waves-effect"><i class="md md-public"></i><span>Show Location </span></a>
+                             <li>
+                                <a href="<?php echo site_url ('daftar_masuk/driver_loc');?>" class="waves-effect"><i class="md md-public"></i><span>Show location </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -112,8 +112,53 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
                 <!-- Start content -->
-                <div class="content"> 
-                <center><img src="<?php echo base_url().'images/buns_map.jpg'?>" width="1000">  </center>         
+                <div class="content">
+                    
+                <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Select Bus</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="table-responsive">
+                                                  <table class="table table-striped">
+                                                    <thead>
+                                                       <tr>
+                                                          <th>Bus</th>
+                                                          <th>Action</th>
+                                                       </tr>
+                                                    </thead>
+                                                     <tbody>
+                
+                                                        <?php if (isset($bus) && !empty($bus)) { foreach ($bus as $bu) { ?>
+                                                         <tr>
+                                                             <td><?=$bu->bus_plate_no; ?></td>
+                                                             <td><a href="<?=site_url('daftar_masuk/selectBus/2?bu='.$this->my_func->encrypt($bu->bus_id)); ?>">Choose</a></td>
+                                                         </tr>
+                                                        <?php } } ?>
+                
+                                                        </tbody>
+                                                    </table>
+        
+  
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                               
                 </div> <!-- content -->
 
                 <footer class="footer text-right">
@@ -146,3 +191,36 @@
     
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+     

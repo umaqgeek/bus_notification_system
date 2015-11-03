@@ -477,11 +477,14 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/driver_bus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/selectBus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
                             </li>
 
                             <li>
                                 <a href="<?php echo site_url ('daftar_masuk/driver_maps');?>" class="waves-effect"><i class="md md-public"></i><span>View Maps </span></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url ('daftar_masuk/driver_loc');?>" class="waves-effect"><i class="md md-public"></i><span>Show location </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>

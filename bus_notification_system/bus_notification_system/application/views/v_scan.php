@@ -88,14 +88,14 @@
                             </li>
 
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/driver_bus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/selectBus');?>" class="waves-effect"><i class="md md-directions-bus"></i><span>Select Bus </span></a>
                             </li>
 
                             <li>
                                 <a href="<?php echo site_url ('daftar_masuk/driver_maps');?>" class="waves-effect"><i class="md md-public"></i><span>View Maps </span></a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url ('daftar_masuk/driver_loc');?>" class="waves-effect"><i class="md md-public"></i><span>Show Location </span></a>
+                                <a href="<?php echo site_url ('daftar_masuk/driver_loc');?>" class="waves-effect"><i class="md md-public"></i><span>Show location </span></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -112,8 +112,84 @@
             <!-- ============================================================== -->                      
             <div class="content-page">
                 <!-- Start content -->
-                <div class="content"> 
-                <center><img src="<?php echo base_url().'images/buns_map.jpg'?>" width="1000">  </center>         
+                <div class="content">
+                    
+                <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Select Bus</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="table-responsive">
+                                                      <video autoplay></video>
+                                                        <button id="reset" class="btn btn-primary">Reset camera</button>
+                                                           <script src="<?= base_url(); ?>js/qcode-decoder.min.js"></script>
+                                                             <script type="text/javascript">
+ 
+                                                               (function () 
+                                                                {
+                                                                         'use strict';
+
+                                                                          var qr = new QCodeDecoder();
+
+                                                                          if (!(qr.isCanvasSupported() && qr.hasGetUserMedia())) {   
+                                                                                alert('Your browser doesn\'t match the required specs.');
+                                                                                throw new Error('Canvas and getUserMedia are required');
+                                                                }
+
+                                                                var video = document.querySelector('video');
+                                                                var reset = document.querySelector('#reset');
+                                                                var stop = document.querySelector('#stop');
+
+
+                                                                function resultHandler(err, result) 
+                                                                {
+                                                                    if (err)
+                                                                    return console.log(err.message);
+                                                                    $.post("<?=site_url('daftar_masuk/readBusID'); ?>", { bu:"<?=$busx; ?>", qrcode:result }).done(function(data) {
+                                                                    alert(data);
+                                                                    location.href='<?=site_url('daftar_masuk/selectBus'); ?>';
+                                                                });
+                                                             }
+
+
+                                                                // prepare a canvas element that will receive
+                                                                // the image to decode, sets the callback for
+                                                                // the result and then prepares the
+                                                                // videoElement to send its source to the
+                                                               // decoder.
+
+                                                            qr.decodeFromCamera(video, resultHandler);
+
+                                                            // attach some event handlers to reset and
+                                                            // stop whenever we want.
+
+                                                             reset.onclick = function () 
+                                                             {
+                                                                qr.decodeFromCamera(video, resultHandler);
+                                                             };
+
+                                                           
+                                                             //    stop.onclick = function () {
+                                                             //      qr.stop();
+                                                             //    };
+
+                                                               })();
+                                                             </script>
+        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                
+                               
                 </div> <!-- content -->
 
                 <footer class="footer text-right">
@@ -146,3 +222,49 @@
     
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+     
+
+
+
+
+
+
+
+
+
+
+
+        
+    
