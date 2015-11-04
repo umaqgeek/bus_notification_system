@@ -252,7 +252,7 @@ font-size: 16px;"> Last access : 31 May 2014 &nbsp; <a href="<?php echo site_url
                                                                        <tr>
                                                                        <td><?=$bu->bus_id; ?></td>
                                                                        <td><?=$bu->bus_plate_no; ?></td>
-                                                                       <td><a href="<?=site_url ('daftar_masuk/select_bus/2?bu='.$bu->bus_id);?>">Select Bus</a></td>
+                                                                       <td><a href="<?php echo site_url ('daftar_masuk/select_bus/2?bu='.$bu->bus_id);?>">Select Bus</a></td>
                                                                        </tr><?php } }?>
                                                         </tbody>
                                                     </table>
