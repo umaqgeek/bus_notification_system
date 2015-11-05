@@ -30,14 +30,13 @@
             setTimeout( "loopLocation()", 2000);
         }
 
-       getLocation();
+        getLocation();
         // Initialize and display a google map
         function getLocation()
         {
             // HTML5/W3C Geolocation
             if ( navigator.geolocation ) {
                 navigator.geolocation.getCurrentPosition( UserLocation );
-
                 }
             // Default to Washington, DC
             else
@@ -48,10 +47,10 @@
         function UserLocation( position )
         {
             ShowLocation( position.coords.latitude, position.coords.longitude, "This is your Location" );
-            /*$.post("http://tuffah.info/bns_system/index.php/driver/saveDriverLocation", {
+            $.post("http://tuffah.info/bns_system/index.php/driver/saveDriverLocation", {
                     latitud: position.coords.latitude,
                     longitud: position.coords.longitude
-                }).done(function( data ) { });*/
+                }).done(function( data ) { });
         }
         
         // Display a map centered at the specified coordinate with a marker and InfoWindow.
@@ -61,7 +60,7 @@
             var latlng = new google.maps.LatLng( lat, lng );    
             
             // Map options for how to display the Google map
-            var mapOptions = { zoom: 15, center: latlng  };
+            var mapOptions = { zoom: 17, center: latlng  };
             
             // Show the Google map in the div with the attribute id 'map-canvas'.
             map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
@@ -86,7 +85,7 @@
         
         // Call the method 'Init()' to display the google map when the web page is displayed ( load event )
         google.maps.event.addDomListener( window, 'load', getLocation );
-
+        loopLocation();
         </script>
         <style>
         /* style settings for Google map */
