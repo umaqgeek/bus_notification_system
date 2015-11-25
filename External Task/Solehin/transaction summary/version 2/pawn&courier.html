@@ -36,6 +36,19 @@ table#t01 th	{
 .thick {
     font-weight: bold;
 }
+.grad1 {
+    background: -webkit-linear-gradient(orange,gold); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(orange,gold); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(orange,gold); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(orange,gold); /* Standard syntax (must be last) */
+}
+.alert {
+    color: white;
+    background: -webkit-linear-gradient(rgb(224,48,30),rgb(163,32,32)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(224,48,30),rgb(163,32,32)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(224,48,30),rgb(163,32,32)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(224,48,30),rgb(163,32,32)); /* Standard syntax (must be last) */
+}
 </style>
 </head>
 <body>
@@ -43,7 +56,7 @@ table#t01 th	{
 <tr>
 <td colspan="2">
 	<center>
-	<img src="http://i.imgur.com/dutICab.png" height="40" width="150"> <br>
+	<img src="http://i.imgur.com/dutICab.png" height="35" width="150"> <br>
 	<b><u>DinarPal International Office</u></b><br>
 	Suite 15, MITC Commercial Street,<br>
 	75450 Ayer Keroh, Melaka <br>
@@ -56,180 +69,157 @@ table#t01 th	{
 <center><h2>Pawn & Courier</h2></center> 
 <table id="t01" class="two" style="width:80%" align="center">
 <tr>
-	<td class="thick" style="width:15%">Name	:</td>
+	<td class="alert">Status</td>
+	<td class="alert">Complete / Pending</td>
+</tr>
+</table><br>
+<table id="t01" class="two" style="width:80%" align="center">
+<tr>
+	<td class="thick" style="width:15%">Name</td>
 	<td style="width:35%">Umar Mukhtar (Member)</td>
-	<td class="thick" style="width:15%">Transaction ID	:</td>
+	<td class="thick" style="width:15%">Transaction ID</td>
 	<td style="width:15%">PC017</td>
-	<td class="thick">Start Date	:</td>
+	<td class="thick">Start Date</td>
 	<td>18/11/15</td>
 </tr>
 <tr>
-	<td class="thick">Address	:</td>
+	<td class="thick">Address</td>
 	<td>No 171, Taman Saujana Indah, Jalan Munshi Abdullah, Bukit Katil, Melaka,75450, Malaysia</td>
-	<td class="thick">Time	:</td>
+	<td class="thick">Time</td>
 	<td>11:34 AM </td>
-	<td class="thick">End Date	:</td>
+	<td class="thick">End Date</td>
 	<td>16/05/16</td>
 </tr>
 <tr>
-	<td class="thick">Email	:</td>
+	<td class="thick">Email</td>
 	<td>kidzeclipes@gmail.com</td>
-	<td class="thick">Date	: </td>
+	<td class="thick">Date</td>
 	<td>18/11/15</td>
-	<td class="thick">Total Days	:</td>
+	<td class="thick">Total Days</td>
 	<td>180</td>
 </tr>
 <tr>
-	<td class="thick">Phone Number	:</td>
+	<td class="thick">Phone Number</td>
 	<td>0199737579</td>
-	<td class="thick">DinarPal Address	:</td>
+	<td class="thick">DinarPal Address</td>
 	<td>Malaysia - Melaka - Melaka International Trade Centre</td>
-	<td class="thick">Courier Tracking Number		:</td>
-	<td>FX0123456F</td>
+	<td class="thick">Courier Tracking Number</td>
+	<td>EP141329788MY</td>
 </tr>
 </table>
 <br>
 <table id="t01" class="two" style="width:80%" align="center">
+
 <tr>
-		<td class="thick" colspan="10">Purchase Details</td>
+		<td class="thick" colspan="9">Marhun Details</td>
 </tr>
 <tr>
-	<th style="width:4%">No</th>
-	<th colspan="2">Item</th>
-	<th colspan="2">Item Weight (Grams)</th>
-	<th>Item Price (MYR)</th>
-	<th>Quantity</th>
-	<th>Total Weight (Grams)</th>
-	<th>GST(6%)</th>
-	<th>Amount (MYR)</th>
+	<th class="grad1">No</th>
+	<th colspan="2" class="grad1">Metal Type</th>
+	<th class="grad1">Brand</th>
+	<th class="grad1">Item</th>
+	<th colspan="2" class="grad1">Item Status</th>
+	<th class="grad1">Purity</th>
+	<th class="grad1">Total Weight (Grams)</th>
+</tr>
+<tr><td>1</td>
+	<td colspan="2">Gold</td>
+	<td>DinarPal (DP)</td>
+	<td>Others</td>
+	<td colspan="2">Used</td>
+	<td>999</td>
+	<td>4.25</td>
+</tr>
+
+
+
+<tr>
+		<td class="thick" colspan="9">&nbsp;</td>
+</tr>
+
+<tr>
+	<th style="width:4%" class="grad1">No</th>
+	<th class="grad1">Metal Type</th>
+	<th class="grad1">Price Rate Per Gram (MYR)</th>
+	<th class="grad1">Price Rate (MYR)</th>
+	<th class="grad1">Quantity</th>
+	<th class="grad1">Total Price</th>
+	<th class="grad1">Safe Keeping Fee Per Month (MYR)</th>
+	<th class="grad1">GST(6%)</th>
+	<th class="grad1">Amount (MYR)</th>
 </tr>
 <tr>
 	<td>1</td>
-	<td colspan="2">5 Dinar</td>
-	<td colspan="2">21.25</td>
+	<td>Gold</td>
+	<td>21.25</td>
 	<td>2,783.75</td>
 	<td>1</td>
 	<td>21.25</td>
+	<td>2.46</td>
 	<td>167.03</td>
 	<td>2,950.78</td>
 </tr>
 <tr>
 	<td></td>
-	<td colspan="2"></td>
-	<td colspan="2"></td>
+	<td colspan="6"></td>
+	<th class="grad1">Total Amount</th>
+	<th class="grad1">3,542.87</th>
+</tr>
+<tr>
 	<td></td>
-	<td></td><td></td>
-	<th>Total Amount</th>
-	<th>3,542.87</th>
+	<td colspan="6"></td>
+	<th class="grad1">Collateral Rate</th>
+	<th class="grad1">80%</th>
 </tr>
 <tr>
-		<td class="thick" colspan="10">Marhun Details</td>
+	<td></td>
+	<td colspan="6"></td>
+	<th class="grad1">Accepted E-Dinar (MYR)</th>
+	<th class="grad1">3,542.87</th>
+</tr>
+
+
+<tr>
+		<td class="thick" colspan="9">Additional Charges</td>
 </tr>
 <tr>
-	<th>No</th>
-	<th>Item</th>
-	<th>Metal Type</th>
-	<th>Purity</th>
-	<th>Brand</th>
-	<th>Certificate No. </th>
-	<th style="width:10%">Quantity</th>
-	<th>Price Rate Per Gram (MYR)</th>
-	<th>Total Weight (Grams)</th>
-	<th style="width:14%">Amount (MYR)</th>
+	<th class="grad1">No</th>
+	<th colspan="7" class="grad1">Description</th>
+	<th style="width:14%" class="grad1">Amount (MYR)</th>
 </tr>
-<tr><td>1</td>
-	<td>5 Dinar</td>
-	<td>Gold</td>
-	<td>999</td>
-	<td>DP DinarPal</td>
-	<td>DP001</td>
+<tr>
 	<td>1</td>
-	<td>131.45</td>
-	<td>21.25</td>
-	<td>2,950.78</td>
-</tr>
-<tr>
-	<td>2</td>
-	<td>Collateral Rate</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td><td>&nbsp;</td>
-	<td>80%</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>200.00</td>
-</tr>
-<tr>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<td>&nbsp;</td>
-	<th>Total Additional Charges</th>
-	<th>300.00</th>
-</tr>
-
-<tr>
-		<td class="thick" colspan="10">Additional Charges</td>
-</tr>
-<tr>
-	<th>No</th>
-	<th colspan="8">Description</th>
-	<th style="width:14%">Amount (MYR)</th>
-</tr>
-<tr><td>1</td>
-	<td colspan="8">Ar-Rahnu Fee</td>
-	
+	<td colspan="7">Ar-Rahnu Fee</td>
 	<td>0.00</td>
 </tr>
 <tr>
 	<td>2</td>
-	<td colspan="8">Verification Fee</td>
+	<td colspan="7">Verification Fee</td>
 
-	<td>0.00</td>
-</tr>
-<tr>
-	<td>3</td>
-	<td colspan="8">Safe Keeping Fee Per Month (MYR)</td>
 	<td>0.00</td>
 </tr>
 <tr>
 	<td>4</td>
-	<td colspan="8">Courier Handling Fee</td>
+	<td colspan="7">Courier Handling Fee</td>
 	<td>0.00</td>
 </tr>
 <tr>
 	<td>&nbsp;</td>
-	<td colspan="7">&nbsp;</td>
-	<th>Total Additional Charges</th>
-	<th>0.00</th>
+	<td colspan="6">&nbsp;</td>
+	<th class="grad1">Total Additional Charges</th>
+	<th class="grad1">0.00</th>
 </tr>
 <tr>
 	<td>&nbsp;</td>
-	<td colspan="7">&nbsp;</td>
-	<th>Grand Total</th>
-	<th>3,842.87</th>
-</tr>
-<tr>
-	<td>&nbsp;</td>
-	<td colspan="7">&nbsp;</td>
-	<td class="thick">E - Dinar (Current Balance)</td> 
-	<td>0.00 MYR</td>
-</tr>
-<tr>
-	<td>&nbsp;</td>
-	<td colspan="7">&nbsp;</td>
-	<td class="thick">E - Dinar (Total Balance)</td>
-	<td>0.00 MYR</td>
+	<td colspan="6">&nbsp;</td>
+	<th class="grad1">Grand Total</th>
+	<th class="grad1">3,842.87</th>
 </tr>
 </table><br>
 
 <table id="t01" class="two" style="width:80%" align="center">
 <tr>
-<th colspan="2">Akad</th>
+<th colspan="2" class="grad1">Akad</th>
 </tr>
 <tr>
 	<td class="thick">Choose Amil (Trustee)</td>
